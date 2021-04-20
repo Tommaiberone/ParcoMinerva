@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 
-    <!-- #### -->
+    <!-- ##### -->
     <!-- Head -->
     <head>
         <meta charset = "utf-8">
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
 
-        <!-- CSS stylesheets imports(always Bootstrap FIRST) -->
+        <!-- CSS stylesheets imports (always Bootstrap FIRST) -->
         <link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
         <link rel = "stylesheet" type = "text/css" href = "css/style.css">
 
@@ -18,13 +18,13 @@
     <!-- ##### -->
     <!-- Body -->
     <body>
-        <br>
         
         <div class = "container-fluid sticky-top">
             <br>
-        
+
+            <!-- ##### -->
             <!-- Navigation bar -->
-            <nav class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary shadow border-2 ms-0 me-0 " style = "background-color: #e3f2fd">
+            <nav class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary border-2 shadow ms-0 me-0 " style = "background-color: #e3f2fd">
 
                 <!-- Logo -->
                 <a class = "navbar-brand ms-3" href = "#"> Logo </a>
@@ -32,7 +32,7 @@
                 <!-- Links Home - Attrazioni - Contatti - Biglietti -->
                 <ul class = "navbar-nav ms-auto">
                     <li class = "nav-item">
-                        <a class = "nav-link active" href = "#"> <b> Home </b> </a>
+                        <a class = "nav-link active" href = "index.html"> <b> Home </b> </a>
                     </li>
 
                     <li class = "nav-item">
@@ -51,93 +51,82 @@
                 <!-- Link Login/SignUp -->
                 <ul class = "navbar-nav ms-auto me-3">
                     <li class = "nav-item">
-                        <a id = "login-signup" type = "button" class = "btn btn-primary rounded-pill" href = "#"> <b> Login/SignUp</b> </a>
+                        <a id = "signup" type = "button" class = "btn btn-primary rounded me-2" href = "#"> <b> Sign Up </b> </a>
+                    </li>
+
+                    <li class = "nav-item">
+                        <a id = "login" type = "button" class = "btn btn-primary rounded" href = "#"> <b> Login </b> </a>
                     </li>
                 </ul>
-
             </nav>
-
         </div>
-    
-
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
 
 
+        <!-- ##### -->
+        <!-- Slideshow -->
+        <div id = "slideshow" class = "carousel slide" data-bs-ride = "carousel">
 
+            <!-- Slideshow indicators -->
+            <ol class = "carousel-indicators">
+                <li data-bs-target = "#slideshow" data-bs-slide-to = "0" class = "active" aria-current = "true"></li>
+                <li data-bs-target = "#slideshow" data-bs-slide-to = "1"></li>
+                <li data-bs-target = "#slideshow" data-bs-slide-to = "2"></li>
+                <li data-bs-target = "#slideshow" data-bs-slide-to = "3"></li>
+                <li data-bs-target = "#slideshow" data-bs-slide-to = "4"></li>
+            </ol>
 
+            <!-- Slideshow body -->
+            <div class = "carousel-inner border border-primary border-2 ">
+
+                <!-- Slide 1 -->
+                <div class = "carousel-item active" >
+                    <img class = "d-block w-100" src = "images/montagne-russe.jpg">
+                </div>
+
+                <!-- Slide 2 -->
+                <div class = "carousel-item">
+                    <h1> Example headline </h1>
+                    <p> Hello how are you today? 2 </p>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class = "carousel-item">
+                    <h1> Example headline </h1>
+                    <p> Hello how are you today? 3 </p>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class = "carousel-item">
+                    <h1> Example headline </h1>
+                    <p> Hello how are you today? 4 </p>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class = "carousel-item">
+                    <h1> Example headline </h1>
+                    <p> Hello how are you today? 5 </p>
+                </div>
+            </div>
+
+            <!-- Slideshow controls (previous and next) -->
+            <!-- Previous -->
+            <a class = "carousel-control-prev" role = "button" href = "#slideshow" data-bs-slide = "prev">
+                <span class = "visually-hidden"> Previous </span>
+                <span class = "carousel-control-prev-icon" aria-hidden = "true"></span>            
+            </a>
+
+            <!-- Next -->
+            <a class = "carousel-control-next" role = "button" href = "#slideshow" data-bs-slide = "next">
+                <span class = "visually-hidden"> Next </span>
+                <span class = "carousel-control-next-icon" aria-hidden = "true"></span>            
+            </a>
+        </div>
 
 
         <!-- Optional JS scripts-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
         <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
         <script src = "js/bootstrap.bundle.js"></script>
     </body>
-
 </html>
