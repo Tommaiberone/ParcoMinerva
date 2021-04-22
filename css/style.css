@@ -3,13 +3,16 @@
 /* index.html - Homepage CSS styles */
 /* ##### */
 
-/* Navigation bar styles */
+/* Body styles */
+
 body {
     background-image: url(/images/background.jpg);
-    background-color: #afdeff; /*a9dbff*/
-    background-size: 1920px 1080px;
-
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
+
+/* Navigation bar styles */
+
 .nav-item {
     font-size: 16px;
 }

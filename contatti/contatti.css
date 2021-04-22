@@ -1,0 +1,86 @@
+
+
+
+
+/* Body styles */
+
+body {
+    background-image: url(../images/background.jpg);    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/* Navigation bar styles */
+
+.nav-item {
+    font-size: 16px;
+}
+
+#signup {
+    font-size: 16px;
+}
+
+#login {
+    font-size: 16px;
+}
+
+a.nav-link:hover {
+    color: #0275d8 !important;
+}
+
+a.nav-link.active {
+    color: #0275d8 !important;
+}
+
+
+/* Contatti container styles */
+
+#contatti {
+    border-radius: 15px;
+    background-color: rgba(227,242,253,0.5);
+    position: relative;
+    width: 600px;
+    height: 900px;
+    margin-top: 2%;
+    margin-left: 60%;
+    margin-bottom: 3%;
+}
+
+#contatti > ul {
+    margin: 10%;
+
+}
+
+.fa-li {
+    color: #0275d8;
+}
+
+li > h3, li > p {
+    margin-left: 4%;
+}
+
+/* Google Map styles */
+#Gmap{
+    height: 200px;
+    width: 400px;
+    position: relative;
+    margin-left:4%;
+    border-radius: 10px;
+}
+
+#lorenzo-card {
+    margin-top: 2%;
+    margin-left:-6%;
+    width: 100%;
+}
+.card-img-top {
+    width: 100%;
+    height: 100%;
+}
+
+#tommaso-card {
+    margin-top: 2%;
+    margin-left: 4%;
+    margin-right: -6%;
+    width: 100%;
+}
