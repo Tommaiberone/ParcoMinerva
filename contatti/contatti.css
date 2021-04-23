@@ -1,7 +1,5 @@
 
 
-
-
 /* Body styles */
 
 body {
@@ -68,6 +66,7 @@ li > h3, li > p {
     border-radius: 10px;
 }
 
+/* Chi siamo? cards */
 #lorenzo-card {
     margin-top: 2%;
     margin-left:-6%;
