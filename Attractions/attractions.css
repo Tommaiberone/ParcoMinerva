@@ -1,6 +1,14 @@
+/* Immagine di BackGround */
+body {
+    background-image: url(../images/background.jpg);    
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
 h1 {
     text-align: center;
-    margin-top:30px;
+    font-size: 60px;
+    margin-top:60px;
     margin-bottom: 0px;
 }
 
@@ -11,15 +19,17 @@ h1 {
   
 .tabella {
     display: grid;
-    grid-template-columns: auto auto auto;
-    padding-left: 5px;
-    padding-right: 5px;
+    grid-template-columns: auto auto;
+    padding: 0px 50px 50px 50px;
+    column-gap: 50px;
 }
 
 
 .image {
     transition: .5s ease;
     backface-visibility: hidden;
+    width: fit-content;
+    height: 600px;
 }
   
 .middle {
@@ -34,7 +44,7 @@ h1 {
 }
   
 .container:hover .image {
-    opacity: 0.3;
+    opacity: 0.2;
 }
   
 .container:hover .middle {
@@ -42,8 +52,17 @@ h1 {
 }
   
 .text {
-    color: black;
+    font-family: 'Freckle Face', cursive;
+    color: rgb(0, 0, 0);
     text-align: center;
     position:  relative;
-    font-size: 32px;
+    font-size: 52px;
+}
+
+a.nav-link:hover {
+    color: #0275d8 !important;
+}
+
+a.nav-link.active {
+    color: #0275d8 !important;
 }
