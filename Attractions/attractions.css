@@ -45,6 +45,7 @@ h1 {
   
 .container:hover .image {
     opacity: 0.2;
+    animation: pop 0.3s ease-in-out;
 }
   
 .container:hover .middle {
@@ -59,10 +60,9 @@ h1 {
     font-size: 52px;
 }
 
-a.nav-link:hover {
-    color: #0275d8 !important;
-}
-
-a.nav-link.active {
-    color: #0275d8 !important;
-}
+  
+  @keyframes pop {
+    50%  {
+      transform: scale(1.1);
+    }
+  }

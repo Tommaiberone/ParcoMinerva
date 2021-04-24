@@ -1,4 +1,3 @@
-
 /* ##### */
 /* index.html - Homepage CSS styles */
 /* ##### */
@@ -9,16 +8,7 @@ body {
     background-image: url(/images/background.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
-}
 
-/* Navigation bar styles */
-
-#signup, #login, .nav-item {
-    font-size: 16px;
-}
-
-a.nav-link:hover, a.nav-link.active{
-    color: #0275d8 !important;
 }
 
 /* Slideshow styles */
@@ -85,4 +75,13 @@ a.nav-link:hover, a.nav-link.active{
 #scroll {
     width: 40px;
     margin-left: 20px;
+}
+
+
+.bottone {
+    width: 50%;
+    display: inline-flex;
+    justify-content: center !important;
+    margin-left: 25%;
+    margin-right: 25%;
 }
