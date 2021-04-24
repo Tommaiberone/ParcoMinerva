@@ -13,37 +13,22 @@ body {
 
 /* Navigation bar styles */
 
-.nav-item {
+#signup, #login, .nav-item {
     font-size: 16px;
 }
 
-#signup {
-    font-size: 16px;
-}
-
-#login {
-    font-size: 16px;
-}
-
-a.nav-link:hover {
-    color: #0275d8 !important;
-}
-
-a.nav-link.active {
+a.nav-link:hover, a.nav-link.active{
     color: #0275d8 !important;
 }
 
 /* Slideshow styles */
 .carousel{
-    margin-left: 15%;
-    margin-bottom: 2%;
-    margin-right: 15%;
-    margin-top: 2%;
+    margin: 20px 15% 20px 15%;
 }
 
 .carousel-inner{
 	position:relative;
-    height: 700px;
+    height: 750px;
     border-radius: 40px;
     background-color: black;
     color: white;
@@ -65,4 +50,39 @@ a.nav-link.active {
 .carousel-caption{
     background: rgba(227,242,253,0.8);
     color: black;
+}
+
+.offerte {
+
+    /* border: 3px solid #0275d8 !important; */
+    margin-left: 15%;
+    margin-right: 15%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+
+.card {
+    
+    display: inline-flex;
+    border: 3px solid #0275d8 !important;
+    border-radius: 30px;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.411);
+
+}
+
+.scopri {
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    display: inline-flex;
+    background-color: rgba(255, 255, 255, 0.411);
+
+}
+
+#scroll {
+    width: 40px;
+    margin-left: 20px;
 }
