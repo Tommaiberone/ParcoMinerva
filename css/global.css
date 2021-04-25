@@ -1,0 +1,81 @@
+
+/* Background styles */
+body {
+    background-image: url(../images/background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+/* Navbar styles */
+#navibar {
+    top: 0;
+    transition: top 0.7s;
+}
+
+.nav-item {
+    font-size: 16px;
+}
+
+#signup {
+    font-size: 16px;
+}
+
+#login {
+    font-size: 16px;
+}
+
+a.nav-link:hover {
+    color: #0275d8 !important;
+}
+
+a.nav-link.active {
+    color: #0275d8 !important;
+}
+
+
+/* Bottom bar styles */ 
+#bottom_bar {
+    position: relative;
+    bottom: 0%;
+    width: 100%;
+    display: inline-flex;
+}
+
+.scopri {
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    display: inline-flex;
+}
+
+#scroll {
+    width: 30px;
+    margin-left: 20px;
+}
+
+#scrollButton {
+    margin-left: 35%;
+    margin-right: 0%;
+    font-size: 16px;
+    font-weight: 700px !important;
+}
+
+.scopri {
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    display: inline-flex;
+    background-color: rgba(227,242,253,0.5);
+}
+
+#Copyright{
+    text-align: right;
+    margin-right: 1%;
+    margin-bottom: -1%;
+    font-size: 15px;
+    color:red;
+}
+

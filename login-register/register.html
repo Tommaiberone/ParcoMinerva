@@ -8,6 +8,7 @@
         <title>Registration Page</title>
 
         <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/global.css">
         <link rel="stylesheet" href="login-register.css">
 
     </head>
@@ -18,15 +19,17 @@
         <!-- Navigation bar -->
         <div class = "container-fluid sticky-top">
             <br>
-            <nav class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary border-2 shadow ms-0 me-0 " style = "background-color: #e3f2fd">
+            <nav id = "navibar" class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary border-2 shadow ms-0 me-0 " style = "background-color: #e3f2fd">
 
                 <!-- Logo -->
-                <a class = "navbar-brand ms-3" href = "#"> Logo </a>
+                <a class = "navbar-brand ms-3" href = "../index/index.html">
+                    <img src = "../images/logo-sapienza-new.jpg" style = "width: 120px; height: 40px; margin-top: -10%; margin-bottom: -7%;" class = "rounded rounded-pill">    
+                </a>
 
                 <!-- Links Home - Attrazioni - Contatti - Biglietti -->
                 <ul class = "navbar-nav ms-auto">
                     <li class = "nav-item">
-                        <a class = "nav-link" href = "../index.html"> <b> Home </b> </a>
+                        <a class = "nav-link" href = "../index/index.html"> <b> Home </b> </a>
                     </li>
 
                     <li class = "nav-item">
@@ -95,11 +98,20 @@
             <p class="text-center">
                 <a href="login.html">Sei già registrato? Effettua il login</a>
             </p>
-            
-            <p class="text-center bottom">
-                <a href="../index.html">Torna alla HomePage</a>
-            </p>
-            
         </div>
+
+        <!-- Bottom Bar -->
+        <div id="bottom_bar" class="navbar" >
+            <a id="scrollButton" onclick="window.scroll(0,0);" class="btn scopri" href = "../index/index.html" >Torna alla homepage</a>
+            <span id="Copyright" > <i>©2021, Aloisi-Bersani, all rights reserved </i>  </span>
+        </div>
+
+
+        <!-- Optional JS scripts-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src = "../js/global.js" async></script>
+
+        <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
+        <script src = "../js/bootstrap.bundle.js"></script>
     </body>
 </html>

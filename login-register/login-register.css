@@ -8,7 +8,6 @@ body {
 
 form {
     border-radius: 25px;
-
 }
 
 .login-form {
@@ -19,7 +18,6 @@ form {
     border-radius: 25px;
     background-color: rgba(227,242,253,0.5);
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
-
 }
 
 .login-form form {
@@ -39,7 +37,7 @@ form {
     min-height: 38px;
     border-radius: 2px;
 }
-.btn {        
+form-group > .btn {        
     font-size: 15px;
     font-weight: bold;
 }
@@ -73,10 +71,10 @@ button {
     margin-left: 15px;
 }
 
-a.nav-link:hover {
-    color: #0275d8 !important;
-}
 
-a.nav-link.active {
-    color: #0275d8 !important;
+#bottom_bar {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    display: inline-flex;
 }

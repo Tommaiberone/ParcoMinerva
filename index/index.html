@@ -8,11 +8,9 @@
         <meta name = "viewport" content = "width=device-width, initial-scale=1">
 
         <!-- CSS stylesheets imports (always Bootstrap FIRST) -->
-        <link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css">
-        <link rel = "stylesheet" type = "text/css" href = "css/style.css">
-        <link rel="stylesheet" href="css/bars_style.css">
-
-        <script src="script.js"></script>
+        <link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/global.css">
+        <link rel = "stylesheet" type = "text/css" href = "index.css">
 
         <title> JL - Homepage </title>
     </head>
@@ -26,10 +24,12 @@
         <!-- Navigation bar -->
         <div class = "container-fluid sticky-top">
             <br>
-            <nav class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary border-2 shadow ms-0 me-0 " style = "background-color: #e3f2fd">
+            <nav id = "navibar"  class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary border-2 shadow ms-0 me-0 " style = "background-color: #e3f2fd">
 
                 <!-- Logo -->
-                <a class = "navbar-brand ms-3" href = "#"> Logo </a>
+                <a class = "navbar-brand ms-3" href = "../index/index.html">
+                    <img src = "../images/logo-sapienza-new.jpg" style = "width: 120px; height: 40px; margin-top: -10%; margin-bottom: -7%;" class = "rounded rounded-pill">    
+                </a>
 
                 <!-- Links Home - Attrazioni - Contatti - Biglietti -->
                 <ul class = "navbar-nav ms-auto">
@@ -38,11 +38,11 @@
                     </li>
 
                     <li class = "nav-item">
-                        <a class = "nav-link" href = "Attractions/attractions.html"> <b> Attrazioni </b> </a>
+                        <a class = "nav-link" href = "../Attractions/attractions.html"> <b> Attrazioni </b> </a>
                     </li>
 
                     <li class = "nav-item">
-                        <a class = "nav-link" href = "./contatti/contatti.html"> <b> Contatti </b> </a>
+                        <a class = "nav-link" href = "../contatti/contatti.html"> <b> Contatti </b> </a>
                     </li>
 
                     <li class = "nav-item">
@@ -53,11 +53,11 @@
                 <!-- Link Login/SignUp -->
                 <ul class = "navbar-nav ms-auto me-3">
                     <li class = "nav-item">
-                        <a id = "signup" type = "button" class = "btn btn-primary rounded me-2" href = "login-register/register.html"> <b> Registrati </b> </a>
+                        <a id = "signup" type = "button" class = "btn btn-primary rounded me-2" href = "../login-register/register.html"> <b> Registrati </b> </a>
                     </li>
 
                     <li class = "nav-item">
-                        <a id = "login" type = "button" class = "btn btn-primary rounded" href = "login-register/login.html"> <b> Accedi </b> </a>
+                        <a id = "login" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html"> <b> Accedi </b> </a>
                     </li>
                 </ul>
             </nav>
@@ -81,7 +81,7 @@
 
                 <!-- Slide 1 -->
                 <div id = "slide1" class = "carousel-item active" >
-                    <img src = "images/img5.jpg" class = "d-block" alt = "">
+                    <img src = "../images/img5.jpg" class = "d-block" alt = "">
                     <div class =" carousel-caption d-block border border-primary border-2 rounded-3">
                         <h3> Bevenuto al parco divertimenti della Minerva! </h3>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -90,7 +90,7 @@
 
                 <!-- Slide 2 -->
                 <div id = "slide2" class = "carousel-item">
-                    <img src = "images/img3.jpg" class = "d-block" alt = "">
+                    <img src = "../images/img3.jpg" class = "d-block" alt = "">
                     <div class="carousel-caption d-block border border-primary border-2 rounded-3">
                         <h3> Bevenuto al parco divertimenti della Minerva! </h3>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -99,7 +99,7 @@
 
                 <!-- Slide 3 -->
                 <div id = "slide3" class = "carousel-item">
-                    <img src = "images/img1.jpg" class = "d-block" alt = "">
+                    <img src = "../images/img1.jpg" class = "d-block" alt = "">
                     <div class="carousel-caption d-block border border-primary border-2 rounded-3">
                         <h3> Bevenuto al parco divertimenti della Minerva! </h3>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -108,7 +108,7 @@
 
                 <!-- Slide 4 -->
                 <div id = "slide4" class = "carousel-item">
-                    <img src = "images/img4.jpg" class = "d-block" alt = "">
+                    <img src = "../images/img4.jpg" class = "d-block" alt = "">
                     <div class="carousel-caption d-block border border-primary border-2 rounded-3">
                         <h3> Bevenuto al parco divertimenti della Minerva! </h3>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -117,7 +117,7 @@
 
                 <!-- Slide 5 -->
                 <div id = "slide5" class = "carousel-item">
-                    <img src = "images/img6.jpg" class = "d-block" alt = "">
+                    <img src = "../images/img6.jpg" class = "d-block" alt = "">
                     <div class="carousel-caption d-block border border-primary border-2 rounded-3">
                         <h3> Bevenuto al parco divertimenti della Minerva! </h3>
                         <p>Some representative placeholder content for the first slide.</p>
@@ -140,24 +140,17 @@
         </div>
 
         <!-- Discover more -->
-        <button id="scrollButton" onclick="window.scroll(0,870);" class="btn scopri" >
+        <button id="scrollButton" onclick="window.scroll(0,870);" class="btn scopri border border-primary border-2" >
             <h3>Scopri le nostre offerte!</h3>
-            <img id="scroll" src="images/Scroll_Down.png" alt=""> 
+            <img id="scroll" src="../images/Scroll_Down.png" alt=""> 
         </button>
 
-
-        <!-- Optional JS scripts-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-        <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
-        <script src = "js/bootstrap.bundle.js"></script>
-        
 
         <!-- Our Offers -->
         <div class="offerte">
 
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="images/promo.png" alt="Card image cap">
+                <img class="card-img-top" src="../images/promo.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Offerta Speciale</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -166,7 +159,7 @@
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="images/promo.png" alt="Card image cap">
+                <img class="card-img-top" src="../images/promo.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Offerta Speciale</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -175,7 +168,7 @@
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="images/promo.png" alt="Card image cap">
+                <img class="card-img-top" src="../images/promo.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Offerta Speciale</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -184,7 +177,7 @@
             </div>
             
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="images/promo.png" alt="Card image cap">
+                <img class="card-img-top" src="../images/promo.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Offerta Speciale</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -193,7 +186,7 @@
             </div>
             
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="images/promo.png" alt="Card image cap">
+                <img class="card-img-top" src="../images/promo.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Offerta Speciale</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -202,7 +195,7 @@
             </div>
 
             <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="images/promo.png" alt="Card image cap">
+                <img class="card-img-top" src="../images/promo.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">Offerta Speciale</h5>
                     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -215,8 +208,15 @@
         <!-- Bottom Bar -->
         <div id="bottom_bar" class="navbar">
             <button id="scrollButton" onclick="window.scroll(0,0);" class="btn scopri" >Torna all'inizio</button>
-            <span id="Copyright"> ©Tutti i diritti sono di Cicciogamer89</span>
+            <span id="Copyright" > <i>©2021, Aloisi-Bersani, all rights reserved </i>  </span>
         </div>
 
+
+        <!-- Optional JS scripts-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src = "../js/global.js" async></script>
+
+        <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
+        <script src = "../js/bootstrap.bundle.js"></script>
     </body>
 </html>
