@@ -23,8 +23,7 @@ if (dir == "/contatti") {
 }
 
 var BigliettiActive = '';
-//var preBiglietti = '../Biglietti/';
-var preBiglietti = '';
+var preBiglietti = '../biglietti/';
 if (dir == "/biglietti") {
     BigliettiActive= 'active';
     preBiglietti = '';
@@ -56,7 +55,7 @@ var contatti = ''+
 '                    </li>'+
 ''+
 '                    <li class = "nav-item">'+
-'                        <a class = "nav-link ' + BigliettiActive + ' " href = "' + preBiglietti + '#"> <b> Biglietti </b> </a>'+
+'                        <a class = "nav-link ' + BigliettiActive + ' " href = "' + preBiglietti + 'biglietti.html"> <b> Biglietti </b> </a>'+
 '                    </li>'+
 '                </ul>'+
 ''+

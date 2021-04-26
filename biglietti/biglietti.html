@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+    <!-- ##### -->
+    <!-- Head -->
+    <head>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1">
+
+        <!-- CSS stylesheets imports (always Bootstrap FIRST) -->
+        <link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/global.css">
+        <link rel = "stylesheet" type = "text/css" href = "biglietti.css">
+
+        <!-- Font Awesome icons -->
+        <script src="https://kit.fontawesome.com/fdbba840c9.js" crossorigin="anonymous"></script>
+
+        <title> PDM - Biglietti </title>
+    </head>
+
+    <body onload = "hideOnScroll()" >
+
+        <!-- ##### -->
+        <!-- Navigation bar -->
+        <script src="../js/Top_bar.js"></script>
+
+        <!-- Wrapper flex per i container -->
+        <div class="d-flex p-2 bd-highlight">
+
+            <!-- Container biglietti -->
+            <div id = "biglietti" class = "container border border-primary border-2">
+                <ul class = "fa-ul">
+                    <!-- Acquista il biglietto -->
+                    <li> 
+                        <span class="fa-li"><i class="fas fa-ticket-alt fa-2x"></i></span> <h3> Acquista il biglietto! </h3>
+                        <p> Scegli tra le varie tipologie disponibili: </p>
+                    </li>
+                    
+                    <!-- Tipologie di biglietti -->
+                    <li>
+                        <div class="row row-cols-3">
+                            <div class="col">
+                                <div class = "card border border-primary border-2 text-center">
+                                    <div class="card-header"> <h5> Biglietto base </h5> </div>
+                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                    <div class = "card-body">
+                                        <h6 class="card-title">Data prefissata</h6>
+                                        <p class="card-text">Scegli la data al momento del preordine del biglietto</p>
+
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 4 euro online </li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class = "card border border-primary border-2 text-center">
+                                    <div class="card-header"> <h5> Biglietto base </h5> </div>
+                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                    <div class = "card-body">
+                                        <h6 class="card-title">Data prefissata</h6>
+                                        <p class="card-text">Scegli la data al momento del preordine del biglietto</p>
+
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 4 euro online </li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col">
+                                <div class = "card border border-primary border-2 text-center">
+                                    <div class="card-header"> <h5> Biglietto base </h5> </div>
+                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                    <div class = "card-body">
+                                        <h6 class="card-title">Data prefissata</h6>
+                                        <p class="card-text">Scegli la data al momento del preordine del biglietto</p>
+
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 4 euro online </li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <br> 
+                    
+                    <li>
+                        <div class="row row-cols-2">
+                            <div class="col">
+                                <div class = "card border border-primary border-2 text-center">
+                                    <div class="card-header"> <h5> Abbonamento annuale </h5> </div>
+                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                    <div class = "card-body">
+                                        <h6 class="card-title"> Data libera </h6>
+                                        <p class="card-text"> Puoi entrare quando vuoi nel parco! </p>
+
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 26 euro online </li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <br><br><br>
+                                <div class = "container border border-primary border-2 text-center rounded" >
+                                    <p> <h5>Devi effettuare l'accesso per poter comprare un biglietto! </h5></p>
+                                    <a id = "login" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html" style = "margin-bottom: 2%;"> <b> Accedi </b> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- Fine container biglietti -->
+            
+
+            <!-- Container di destra -->
+            <div id = "div2" class = "container " >
+                <!-- Fun GIF per riempire-->
+                <div id = "gifContainer" class = "container">
+                    <img id = "gif1" src = "../images/theme_park_800x600.gif">
+                </div>
+
+
+                <!-- Meteo container -->
+                <div id = "meteo" class = "container border border-primary border-2">
+                    <ul class = "fa-ul">
+                        
+                        <li> 
+                            <span class="fa-li"><i class="fas fa-cloud-sun fa-2x"></i></span> <h3>  Meteo </h3> 
+                            <p> Consulta il meteo prima di prenotare il tuo biglietto </p>
+                        </li>
+
+                        <!-- Meteo widget here-->
+                        <li>
+
+
+                        </li>
+
+                        
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Bottom Bar -->
+        <script src="../js/Bottom.js"></script>
+
+        <!-- Optional JS scripts-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src = "../js/global.js" async></script>
+
+        <!-- Bootstrap JS bundle (Popper included) -->
+        <script src = "../js/bootstrap.bundle.js"></script>
+    </body>
