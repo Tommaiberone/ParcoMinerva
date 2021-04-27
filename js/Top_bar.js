@@ -31,7 +31,7 @@ if (dir == "/biglietti") {
 
 
 var contatti = ''+
-'        <div class = "container-fluid sticky-top">'+
+'        <div id = "HoverSpace" class = "container-fluid sticky-top">'+
 '            <br>'+
 '            <nav id = "navibar" class = "navbar navbar-expand-sm navbar-light rounded-pill border border-primary border-2 shadow ms-0 me-0 " style = "background-color: #e3f2fd">'+
 ''+
