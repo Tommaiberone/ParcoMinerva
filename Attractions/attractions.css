@@ -20,8 +20,8 @@ h1 {
 .tabella {
     display: grid;
     grid-template-columns: auto auto;
-    padding: 0px 50px 50px 50px;
-    column-gap: 50px;
+    padding: 0px 20px 20px 20px;
+    column-gap: 20px;
 }
 
 
@@ -29,7 +29,7 @@ h1 {
     transition: .5s ease;
     backface-visibility: hidden;
     width: fit-content;
-    height: 600px;
+    height: 500px;
 }
   
 .middle {
@@ -43,12 +43,12 @@ h1 {
     text-align: center;
 }
   
-.container:hover .image {
+.tabella .container:hover .image {
     opacity: 0.2;
     animation: pop 0.3s ease-in-out;
 }
   
-.container:hover .middle {
+.tabella .container:hover .middle {
     opacity: 1;
 }
   
@@ -66,3 +66,23 @@ h1 {
       transform: scale(1.1);
     }
   }
+
+.accordion {
+    width: 80%;
+    margin-top: 20px;
+    margin-right: 10%;
+    margin-left: 10%;
+    align-self: center;
+    
+}
+
+.accordion-item {
+    background: #a4d4fd49;
+    /* max-height: 800px; */
+}
+
+.container {
+
+    border: solid red 2px;
+    /* height: 80%; */
+}
