@@ -15,6 +15,7 @@ h3 {
     grid-template-columns: auto auto;
     padding: 0px 20px 20px 20px;
     column-gap: 20px;
+    row-gap: 30px;
 }
 
 .container {
@@ -90,6 +91,12 @@ h3 {
 .scrollImage {
     width: 40px;
     margin-left: 20px;
+    transform: rotate(0deg);
+
+}
+
+#scrollImage1 {
+    transform: rotate(180deg);
 }
 
 .tabella {

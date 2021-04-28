@@ -12,6 +12,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Freckle+Face&display=swap" rel="stylesheet">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="attractions.js"></script>
+
         <title>PDM - Attrazioni</title>
     </head>
     
@@ -24,9 +27,9 @@
         <!-- Attrazioni -->
         <p>
             <button id="scopri1" class="btn scopri border border-primary border-2 rounded-pill" data-bs-toggle="collapse" 
-                    href="#collapse1" role="button" aria-expanded="true" aria-controls="collapse">
+                    href="#collapse1" role="button" aria-expanded="true" aria-controls="collapse" onclick="rotateImage(1)">
                 <h3>Attrazioni per tutta la famiglia!</h3>
-                <img class="scrollImage" src="../images/Scroll_Down.png"> 
+                <img id="scrollImage1" class="scrollImage" src="../images/Scroll_Down.png"> 
             </button>
         </p>
         <div class="collapse show" id="collapse1">
@@ -47,9 +50,9 @@
 
         <p>
             <button class="btn scopri border border-primary border-2 rounded-pill" data-bs-toggle="collapse" 
-                    href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse">
+                    href="#collapse2" role="button" aria-expanded="false" aria-controls="collapse" onclick="rotateImage(2)">
                     <h3>Attrazioni a tema</h3>
-                <img class="scrollImage" src="../images/Scroll_Down.png"> 
+                <img id="scrollImage2" class="scrollImage" src="../images/Scroll_Down.png"> 
             </button>
         </p>
         <div class="collapse" id="collapse2">
@@ -71,9 +74,9 @@
 
         <p>
             <button class="btn scopri border border-primary border-2 rounded-pill" data-bs-toggle="collapse" 
-                    href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse">
+                    href="#collapse3" role="button" aria-expanded="false" aria-controls="collapse" onclick="rotateImage(3)">
                 <h3>Le più adrenaliniche!</h3>
-                <img class="scrollImage" src="../images/Scroll_Down.png"> 
+                <img id="scrollImage3" class="scrollImage" src="../images/Scroll_Down.png"> 
             </button>
         </p>
         <div class="collapse" id="collapse3">
