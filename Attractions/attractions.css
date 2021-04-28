@@ -1,20 +1,13 @@
 /* Immagine di BackGround */
 body {
     background-image: url(../images/background.jpg);    
-    background-size: 100% 100%;
+    background-size: 100% 200%;
     background-repeat: no-repeat;
 }
 
-h1 {
-    text-align: center;
-    font-size: 60px;
-    margin-top:60px;
-    margin-bottom: 0px;
-}
-
-.col {
-    position: relative;
-    width: 20%;
+h3 {
+    /* text-align: left; */
+    font-size: 30px;
 }
   
 .tabella {
@@ -24,13 +17,23 @@ h1 {
     column-gap: 20px;
 }
 
+.container {
+
+    position: relative;
+    width: 700px; 
+    margin: 50px 50px 20px 0px;
+    height: 500px;
+} 
 
 .image {
+
+    position: relative;
     transition: .5s ease;
     backface-visibility: hidden;
+    
     height: 500px;
-    width: 50%;
-
+    margin-top: -80px;
+    width: 100%;
 }
   
 .tabella .container:hover .image {
@@ -43,11 +46,10 @@ h1 {
 }
   
 .text {
-
     transition: .5s ease;
     opacity: 0;
     position:  relative;
-    top: 50%;
+    top: 40%;
     font-family: 'Freckle Face', cursive;
     color: rgb(0, 0, 0);
     font-size: 52px;
@@ -60,40 +62,30 @@ h1 {
     }
   }
 
-.accordion {
-    width: 80%;
-    margin-top: 20px;
-    margin-right: 10%;
-    margin-left: 10%;
-
-    border-radius: 90%;
-    
-}
-
-.accordion-item {
-    background: #a4d4fd49;
-    /* max-height: 800px; */
-}
-
 .scopri {
     justify-content: center;
     width: 30%;
+    margin-top: 30px;
     margin-left: 35%;
     margin-right: 35%;
     display: inline-flex;
     background-color: rgba(227,242,253,0.5);
 }
-#scrollButton {
-    margin-top: 30px;
-    margin-left: 35%;
-    margin-right: 0%;
-    font-size: 16px;
-    font-weight: 700px !important;
 
+.scrollImage {
+    width: 40px;
+    margin-left: 20px;
 }
 
-.collapse {
+.tabella {
     width: 80%;
     margin-left: 10%;
     margin-right: 10%;
+    /* background-color: rgba(227,242,253,0.5); */
+}
+
+.scroll {
+    width: 40px;
+    margin-left: 20px;
+    right: 20px;
 }
