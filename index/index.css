@@ -2,7 +2,6 @@
 /* index.html - Homepage CSS styles */
 /* ##### */
 
-
 /* Slideshow styles */
 .carousel{
     margin: 1% 15% 20px 15%;
@@ -44,6 +43,26 @@
     grid-template-columns: auto auto auto;
 }
 
+#card-img-top1 {
+    margin: auto;
+    margin-top: 5%;
+    width: 60%;
+}
+
+#card-img-top2 {
+    margin: auto;
+    margin-top: 5%;
+    width: 60%;
+    height: 50%;
+}
+
+#card-img-top3 {
+    margin: auto;
+    margin-top: 5%;
+    image-resolution: 200%;
+    height: 50%;
+}
+
 .card {
     
     display: inline-flex;
@@ -52,15 +71,6 @@
     margin: 30px;
     background-color: rgba(255, 255, 255, 0.411);
 
-}
-
-.scopri {
-    justify-content: center;
-    width: 30%;
-    margin-left: 35%;
-    margin-right: 35%;
-    display: inline-flex;
-    background-color: rgba(227,242,253,0.5);
 }
 
 #scroll {
@@ -84,6 +94,17 @@
     margin-right: 25%;
 }
 
+#modal-title1 {
+    margin-left: 32%;
+}
+
+#modal-title2 {
+    margin-left: 25%;
+}
+
+#modal-title3 {
+    margin-left: 22%;
+}
 
 
 

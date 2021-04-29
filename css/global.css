@@ -2,8 +2,19 @@
 /* Background styles */
 body {
     background-image: url(../images/background_test2.jpg);
-    background-size: 100% 100%;
     background-repeat: no-repeat;
+    background-size: cover;
+    /* background-size: 1920px 2160px; */
+}
+
+/* Bottom bar button */
+.scopri {
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+    margin-right: 35%;
+    display: inline-flex;
+    background-color: rgba(227,242,253,0.5);
 }
 
 

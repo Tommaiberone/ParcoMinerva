@@ -1,9 +1,3 @@
-/* Immagine di BackGround */
-body {   
-    background-size: 100% 200%;
-    background-repeat: no-repeat;
-}
-
 h3 {
     /* text-align: left; */
     font-size: 30px;
@@ -71,17 +65,14 @@ h3 {
   }
 
 .scopri {
-    justify-content: center;
-    width: 30%;
     margin-top: 60px;
-    margin-left: 35%;
-    margin-right: 35%;
-    display: inline-flex;
-    background-color: rgba(227,242,253,0.5);
 }
 
 #scopri1{
     margin-top: 30px;
+}
+#backToTopButton{
+    margin-top: 0px;
 }
 
 .scrollImage {
