@@ -40,12 +40,12 @@
                     <li>
                         <div class="row row-cols-3">
                             <div class="col">
-                                <div class = "card border border-primary border-2 text-center">
+                                <div class = "card border border-primary border-2 text-center" id = "tickbase">
                                     <div class="card-header"> <h5> Biglietto base </h5> </div>
-                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                    <img src="./immagini/base.jpg" class="card-img-top" id = "base">
                                     <div class = "card-body">
                                         <h6 class="card-title">Data prefissata</h6>
-                                        <p class="card-text">Scegli la data al momento del preordine del biglietto</p>
+                                        <p class="card-text">Scegli la data al momento dell'acquisto del biglietto</p>
 
                                     </div>
                                     <ul class="list-group list-group-flush">
@@ -57,35 +57,37 @@
                             </div>
 
                             <div class="col">
-                                <div class = "card border border-primary border-2 text-center">
-                                    <div class="card-header"> <h5> Biglietto base </h5> </div>
-                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                <div class = "card border border-primary border-2 text-center" id = "tickbasex">
+                                    <div class="card-header"> <h5> Biglietto base +</h5> </div>
+                                    <img src="./immagini/base+.png" class="card-img-top" id = "basex">
                                     <div class = "card-body">
-                                        <h6 class="card-title">Data prefissata</h6>
-                                        <p class="card-text">Scegli la data al momento del preordine del biglietto</p>
+                                        <h6 class="card-title">Data libera</h6>
+                                        <p class="card-text">Acquista il biglietto ed entra quando vuoi!</p>
 
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 4 euro online </li>
-                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 6 euro online </li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri quando vuoi</li>
                                         <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
                                     </ul>
                                 </div>
                             </div>
                             
                             <div class="col">
-                                <div class = "card border border-primary border-2 text-center">
-                                    <div class="card-header"> <h5> Biglietto base </h5> </div>
-                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                <div class = "card border border-primary border-2 text-center" id = "tickvip"> 
+                                    <div class="card-header"> <h5> Biglietto VIP </h5> </div>
+                                    <img src="./immagini/vip.jpg" class="card-img-top" id = "VIP">
                                     <div class = "card-body">
-                                        <h6 class="card-title">Data prefissata</h6>
-                                        <p class="card-text">Scegli la data al momento del preordine del biglietto</p>
+                                        <h6 class="card-title">Data libera </h6>
+                                        <p class="card-text">Acquista il biglietto ed entra quando vuoi!</p>
 
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 4 euro online </li>
-                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 8 euro online</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri quando vuoi</li>
                                         <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Salta la fila in tutte le attrazioni! </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -99,16 +101,17 @@
                             <div class="col">
                                 <div class = "card border border-primary border-2 text-center">
                                     <div class="card-header"> <h5> Abbonamento annuale </h5> </div>
-                                    <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                    <img src="./immagini/abbonamento.jpg" class="card-img-top">
                                     <div class = "card-body">
                                         <h6 class="card-title"> Data libera </h6>
                                         <p class="card-text"> Puoi entrare quando vuoi nel parco! </p>
 
                                     </div>
                                     <ul class="list-group list-group-flush">
-                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 26 euro online </li>
-                                        <li class="list-group-item"> <i class="fas fa-check"></i> Scegli la data esatta di ingresso al parco</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Risparmi 16 euro online </li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Entri quando vuoi</li>
                                         <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
+                                        <li class="list-group-item"> <i class="fas fa-check"></i> Salta la fila in tutte le attrazioni! </li>
                                     </ul>
                                 </div>
                             </div>
@@ -146,7 +149,22 @@
 
                         <!-- Meteo widget here-->
                         <li>
+                            <div class="container">
+                                <img src="" alt="" srcset="" id="weather-icon">
+                                <div id="location">Unable to Fetch Weather</div>
+                                <div class="desc">No Information Available.</div>
+                                <div class="weather">
+                                    <div class="c">Error</div>
+                                    <div class="circle"></div>
+                                    <div class="f">Error</div>
+                                </div>
 
+                                <div class="info">
+                                    <h4>Alba: <span class="sunrise">No Information Available</span></h4>
+                                    <h4>Tramonto: <span class="sunset">No Information Available</span></h4>
+                                </div>
+                        
+                            </div>
 
                         </li>
 
