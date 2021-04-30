@@ -144,12 +144,14 @@
                         
                         <li> 
                             <span class="fa-li"><i class="fas fa-cloud-sun fa-2x"></i></span> <h3>  Meteo </h3> 
-                            <p> Consulta il meteo prima di prenotare il tuo biglietto </p>
+                            <p> Consulta il meteo prima di acquistare il biglietto </p>
                         </li>
+                        <br>
+                        
 
                         <!-- Meteo widget here-->
                         <li>
-                            <div class="container">
+                            <div class="container" id = "meteoCon">
                                 <img src="" alt="" srcset="" id="weather-icon">
                                 <div id="location">Unable to Fetch Weather</div>
                                 <div class="desc">No Information Available.</div>
@@ -160,8 +162,8 @@
                                 </div>
 
                                 <div class="info">
-                                    <h4>Alba: <span class="sunrise">No Information Available</span></h4>
-                                    <h4>Tramonto: <span class="sunset">No Information Available</span></h4>
+                                    <h5>Alba: <span class="sunrise">No Information Available</span></h5>
+                                    <h5>Tramonto: <span class="sunset">No Information Available</span></h5>
                                 </div>
                         
                             </div>
@@ -181,6 +183,7 @@
         <!-- Optional JS scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src = "../js/global.js" async></script>
+        <script src = "biglietti.js"></script>
 
         <!-- Bootstrap JS bundle (Popper included) -->
         <script src = "../js/bootstrap.bundle.js"></script>

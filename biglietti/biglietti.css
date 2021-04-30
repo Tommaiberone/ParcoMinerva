@@ -1,4 +1,5 @@
 /* Biglietti container styles */
+
 #biglietti {
     border-radius: 15px;
     background-color: rgba(227,242,253,0.5);
@@ -32,8 +33,9 @@ li > h3, li > p {
 }
 
 #base, #basex, #VIP{
-    width: 244px;
-    height: 170px;
+    position:relative;
+    width: 15.25rem;
+    height: 10.625rem;
 }
 
 
@@ -67,6 +69,9 @@ li > h3, li > p {
     opacity: 90%;
 }
 
+
+/* Meteo widget*/
+
 #meteo {
     border-radius: 15px;
     background-color: rgba(227,242,253,0.5);
@@ -78,3 +83,44 @@ li > h3, li > p {
     margin-bottom: 3%;
 }
 
+
+#meteoCon {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(251, 242, 133);
+    background: radial-gradient(
+    circle,
+    rgba(251, 242, 133, 0.6334908963585435) 0%,
+    rgba(224, 196, 91, 0.8407738095238095) 35%,
+    rgba(230, 224, 113, 1) 100%
+    );
+    border-radius: 40px;
+}
+
+.weather {
+    display: flex; 
+    align-items: center;
+    margin: 15px 0;
+    font-size: 1.5rem;
+  }
+
+  #location {
+    font-size: 2rem;
+    font-weight: 800;
+    font-style: italic;
+  }
+  .desc {
+    font-size: 1.25rem;
+    text-transform: capitalize;
+  }
+  .circle {
+    background-color: black;
+    border-radius: 50px;
+    height: 15px;
+    width: 15px;
+    margin: 0 15px;
+  }
