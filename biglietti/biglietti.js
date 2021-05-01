@@ -1,4 +1,4 @@
-const api = "1e3557c6cfb762e2fd0171356edf710e" ;  //API key
+const api = "1e3557c6cfb762e2fd0171356edf710e";  //API key
 
 //DOM elements to be changed 
 const iconImg = document.getElementById('weather-icon');
@@ -10,12 +10,13 @@ const sunriseDOM = document.querySelector('.sunrise');
 const sunsetDOM = document.querySelector('.sunset');
 
 //Sapienza coordinates
-let long = 12.514115084657702;
-let lat = 41.903705747404736;
+let citycode = 3169071;
+let long = 12.51; //4115084657702
+let lat = 41.90; //3705747404736
 
 
 // API call
-const base = `https://api.openweathermap.org/data/2.5/weatherlat=${lat}&lon=${long}&appid=${api}&units=metric`;
+const base = `https://api.openweathermap.org/data/2.5/weather?id=${citycode}&appid=${api}&units=metric`
 
 console.log(base);
 
