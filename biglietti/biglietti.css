@@ -84,7 +84,7 @@ li > h3, li > p {
 
 
 #meteoCon {
-    height: 300px;
+    height: 320px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -98,6 +98,7 @@ li > h3, li > p {
     rgba(230, 224, 113, 1) 100%
     );
     border-radius: 40px;
+    opacity: 90%;
 }
 
 .weather {
