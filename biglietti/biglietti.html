@@ -20,15 +20,15 @@
 
     <body onload="loadWeather()">
 
-        <!-- ##### -->
         <!-- Navigation bar -->
         <script src="../js/Top_bar.js"></script>
+
 
         <!-- Wrapper flex per i container -->
         <div class="d-flex p-2 bd-highlight">
 
             <!-- Container biglietti -->
-            <div id = "biglietti" class = "container border border-primary border-2">
+            <div id = "biglietti" class = "container-fluid border border-primary border-2">
                 <ul class = "fa-ul">
                     <!-- Acquista il biglietto -->
                     <li> 
@@ -87,7 +87,6 @@
                                         <li class="list-group-item"> <i class="fas fa-check"></i> Entri quando vuoi</li>
                                         <li class="list-group-item"> <i class="fas fa-check"></i> Entri senza attesa alle biglietterie</li>
                                         <li class="list-group-item last-elem-rounded"> <i class="fas fa-check"></i> Salta la fila in tutte le attrazioni! </li>
-
                                     </ul>
                                 </div>
                             </div>
@@ -136,6 +135,7 @@
 
             <!-- Container di destra -->
             <div id = "div2" class = "container " >
+
                 <!-- Fun GIF per riempire-->
                 <div id = "gifContainer" class = "container">
                     <img id = "gif1" src = "../images/theme_park_800x600.gif">
@@ -145,13 +145,12 @@
                 <!-- Meteo container -->
                 <div id = "meteo" class = "container border border-primary border-2">
                     <ul class = "fa-ul">
-                        
                         <li> 
                             <span class="fa-li"><i class="fas fa-cloud-sun fa-2x"></i></span> <h3>  Meteo </h3> 
                             <p> Consulta il meteo prima di acquistare il biglietto </p>
                         </li>
-                        <br>
-                        
+
+                        <br>                        
 
                         <!-- Meteo widget here-->
                         <li>
@@ -169,16 +168,11 @@
                                     <h5>Sunrise: <span class="sunrise">No Information Available</span></h5>
                                     <h5>Sunset: <span class="sunset">No Information Available</span></h5>
                                 </div>
-                        
                             </div>
-
                         </li>
-
-                        
                     </ul>
                 </div>
             </div>
-            
         </div>
         
         <!-- Bottom Bar -->
