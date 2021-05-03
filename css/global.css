@@ -53,7 +53,7 @@ a.nav-link:hover, a.nav-link.active {
 
 /* Bottom bar styles */ 
 #bottom_bar {
-    position: relative;
+    position: absolute;
     bottom: 0%;
     width: 100%;
     display: inline-flex;

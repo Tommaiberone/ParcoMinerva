@@ -27,5 +27,9 @@ window.onscroll = function() {
 
 }
 
+function updateTextInput(val, num) {
+    document.getElementById('textInput' + num).value=val; 
+}
+
     
 

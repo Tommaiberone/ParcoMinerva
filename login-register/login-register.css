@@ -63,10 +63,7 @@ button {
     margin-left: 15px;
 }
 
-
-#bottom_bar {
-    position: absolute;
-    bottom: 0%;
-    width: 100%;
-    display: inline-flex;
+.ticket-tipe {
+    display: grid;
+    grid-template-columns: auto;
 }
