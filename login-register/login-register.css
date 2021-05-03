@@ -67,3 +67,24 @@ button {
     display: grid;
     grid-template-columns: auto;
 }
+
+.range-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.range-value {
+    margin-top: 6px;
+    margin-left: -30px;
+}
+
+.form-range {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.biglietto {
+    font-size: 19px;
+}

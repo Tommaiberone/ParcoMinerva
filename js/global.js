@@ -27,8 +27,16 @@ window.onscroll = function() {
 
 }
 
-function updateTextInput(val, num) {
-    document.getElementById('textInput' + num).value=val; 
+function update(val, num) {
+    
+    $('#range-value' + num).text(val)
+
+    var total = parseInt($('#range-value1').text())*10;
+    total += parseInt($('#range-value2').text())*12;
+    total += parseInt($('#range-value3').text())*16;
+    total += parseInt($('#range-value4').text())*100;
+
+    $('#importo-totale').text(total);
 }
 
     
