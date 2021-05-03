@@ -1,18 +1,23 @@
 /* leftContainer container styles */
 
+#Horizontal-list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
 #leftContainer{
     float:left;
-    margin-top: 2%;
-    margin-bottom: 3%;
-    margin-left: 3%;
+    margin-top: 35px;
+    margin-left: 60px;
     position: relative;
 }
 
 #gifContainer {
     border-radius: 15px;
     position: relative;
-    width: 400px;
+    width: 500px;
     height: 300px;
+    margin-top: 250px;
 }
 
 #gif1 {
@@ -21,8 +26,6 @@
     height: 100%;
     opacity: 90%;
 }
-
-
 
 #ChiSiamoContainer {
     border-radius: 15px;
@@ -39,21 +42,24 @@
     background-color: rgba(227,242,253,0.5);
     position: relative;
     width: 600px;
-    height: 640px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-right: 3%;
+    height: 660px;
+    margin-top: 75px;
+    margin-right: 60px;
     float: right;
 }
 
 #contatti > ul, #ChiSiamoContainer > ul{
     margin: 10%;
     margin-top: 7%;
-
 }
 
 .fa-li {
     color: #0275d8;
+    
+}
+
+li {
+    margin-bottom: 4px;
 }
 
 li > h3, li > p {
@@ -69,20 +75,25 @@ li > h3, li > p {
     border-radius: 10px;
 }
 
-
 /* Chi siamo? cards */
-#lorenzo-card {
-    margin-top: 2%;
-    margin-left:-6%;
-    width: 100%;
+
+.card{
+    margin-top: 25px;
+    border-radius: 15px !important;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow: hidden;
 }
 .card-img-top {
     width: 100%;
     height: 100%;
 }
 
+#lorenzo-card {
+    margin-left:-6%;
+    width: 100%;
+}
+
 #tommaso-card {
-    margin-top: 2%;
     margin-left: 4%;
     margin-right: -6%;
     width: 100%;

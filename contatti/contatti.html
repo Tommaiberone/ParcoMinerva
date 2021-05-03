@@ -27,111 +27,110 @@
         <!-- Navigation bar -->
         <script src="../js/Top_bar.js"></script>
 
+        <span id="Horizontal-list">
+            <div id = "leftContainer" >
 
-        <div id = "leftContainer" >
+                <!-- Chi siamo container-->
+                <div id = "ChiSiamoContainer" class = "container border border-primary border-2">
+                    <ul class = "fa-ul">
+                        <!-- Chi siamo + BS card with our photos -->
+                        <li> 
+                            <span class="fa-li"><i class="fas fa-users fa-2x"></i></span> <h3> Chi siamo? </h3> 
+                            <table>
+                                <tr>
+                                    <td>
+                                        <!-- Lorenzo card -->
+                                        <div id = "lorenzo-card" class="card border border-primary rounded">
+                                            <img src="../images/Lorenzo.jpg" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Lorenzo Aloisi</h5>
+                                                <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
+                                                <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
+                                                <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
+                                            </div>
+                                        </div>
+                                    </td>
+
+                                    <!-- Tommaso card -->
+                                    <td>
+                                        <div id = "tommaso-card" class="card border border-primary rounded">
+                                            <img src="../images/Tommaso.jpeg" class="card-img-top">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tommaso Bersani</h5>
+                                                <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
+                                                <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
+                                                <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </li>
+
+                        <br>
+                        <br>
+
+                        <li>
+                            <span class="fa-li"><i class="fab fa-github fa-2x"></i></span> <h3> <a href = "https://github.com/Tommaiberone/JollyLand" >GitHub repository </h3></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
 
             <!-- Fun GIF per riempire -->
             <div id = "gifContainer" class = "container">
                 <img id = "gif1" src = "../images/lina-shot-carousel.gif">
             </div>
 
-            <!-- Chi siamo container-->
-            <div id = "ChiSiamoContainer" class = "container border border-primary border-2">
-                <ul class = "fa-ul">
-                     <!-- Chi siamo + BS card with our photos -->
-                    <li> 
-                        <span class="fa-li"><i class="fas fa-users fa-2x"></i></span> <h3> Chi siamo? </h3> 
-                        <table>
-                            <tr>
-                                <td>
-                                    <!-- Lorenzo card -->
-                                    <div id = "lorenzo-card" class="card border border-primary rounded">
-                                        <img src="../images/Lorenzo.jpg" class="card-img-top">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Lorenzo Aloisi</h5>
-                                            <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
-                                            <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
-                                            <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
-                                        </div>
-                                    </div>
-                                </td>
 
-                                <!-- Tommaso card -->
-                                <td>
-                                    <div id = "tommaso-card" class="card border border-primary rounded">
-                                        <img src="../images/Lorenzo.jpg" class="card-img-top">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Tommaso Bersani</h5>
-                                            <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
-                                            <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
-                                            <p class="card-text">Studente di Ingegneria Informatica e Automatica</p>
-                                        </div>
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
+        
+            <!-- Contatti container -- Right container  -->
+            <div id = "contatti" class = "container border border-primary border-2">
+                <ul class = "fa-ul">
+                    <!-- Chiamaci -->
+                    <li> 
+                        <span class="fa-li"><i class="fas fa-phone fa-2x"></i></span> <h3> Chiamaci! </h3>
+                        <p> (+39) 06 49911</p>
+                    </li>
+                    
+                    <br>
+                    
+                    <!-- Dove siamo + Google Map -->
+                    <li>
+                        <span class="fa-li"><i class="fas fa-map fa-2x"></i></span> <h3> Dove siamo? </h3>
+                        <p> Piazzale Aldo Moro 5, 00185 Roma </p>
+                        <!-- Google Map -->
+                        <div id="Gmap"></div>
                     </li>
 
                     <br>
                     <br>
 
-                    <li>
-                        <span class="fa-li"><i class="fab fa-github fa-2x"></i></span> <h3> <a href = "https://github.com/Tommaiberone/JollyLand" >GitHub repository </h3></a>
+                    <!-- Chi siamo + BS card with our photos -->
+                    <li> 
+                        <span class="fa-li"><i class="fas fa-car fa-2x"></i></span> <h3> Come raggiungerci? </h3> 
+                        <ul class = "fa-ul">
+                        <li>
+                            <span class = "fa-li"><i class = "fas fa-bus"></i></span>Dalla Stazione Termini: autobus 310                        
+                        </li>
+
+                        <li>
+                            <span class = "fa-li"><i class = "fas fa-bus"></i></span>Dalla Stazione Tiburtina: autobus 163, 492, 71                       
+                        </li>
+
+                        <li>
+                            <span class = "fa-li"><i class = "fas fa-tram"></i></span>Da Piazza S. Giovanni: tram 3                    
+                        </li>
+
+                        <li>
+                            <span class = "fa-li"><i class = "fas fa-subway"></i></span>Metro linea B: fermata "Policlinico"                  
+                        </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-        </div>
-
-
-        
-            
-        
-    
-        <!-- Contatti container -- Right container  -->
-        <div id = "contatti" class = "container border border-primary border-2">
-            <ul class = "fa-ul">
-                <!-- Chiamaci -->
-                <li> 
-                    <span class="fa-li"><i class="fas fa-phone fa-2x"></i></span> <h3> Chiamaci! </h3>
-                    <p> (+39) 06 49911</p>
-                </li>
-                
-                <br>
-                
-                <!-- Dove siamo + Google Map -->
-                <li>
-                    <span class="fa-li"><i class="fas fa-map fa-2x"></i></span> <h3> Dove siamo? </h3>
-                    <p> Piazzale Aldo Moro 5, 00185 Roma </p>
-                    <!-- Google Map -->
-                    <div id="Gmap"></div>
-                </li>
-
-                <br>
-                <br>
-
-                <!-- Chi siamo + BS card with our photos -->
-                <li> 
-                    <span class="fa-li"><i class="fas fa-car fa-2x"></i></span> <h3> Come raggiungerci? </h3> 
-                    <ul class = "fa-ul">
-                    <li>
-                        <span class = "fa-li"><i class = "fas fa-bus"></i></span>Dalla Stazione Termini: autobus 310                        
-                    </li>
-
-                    <li>
-                        <span class = "fa-li"><i class = "fas fa-bus"></i></span>Dalla Stazione Tiburtina: autobus 163, 492, 71                       
-                    </li>
-
-                    <li>
-                        <span class = "fa-li"><i class = "fas fa-tram"></i></span>Da Piazza S. Giovanni: tram 3                    
-                    </li>
-
-                    <li>
-                        <span class = "fa-li"><i class = "fas fa-subway"></i></span>Metro linea B: fermata "Policlinico"                  
-                    </li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        </span>
         
         <!-- Bottom Bar -->
         <script src="../js/Bottom.js"></script>
