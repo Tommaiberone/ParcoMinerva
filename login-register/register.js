@@ -9,7 +9,6 @@ function validateForm() {
     var pass2 = $("#password2").val();
 
 
-    event.preventDefault();
 
     if (validateNome(nome));
     
