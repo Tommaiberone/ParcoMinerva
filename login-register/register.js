@@ -8,8 +8,6 @@ function validateForm() {
     var pass1 = $("#password1").val();
     var pass2 = $("#password2").val();
 
-
-
     if (validateNome(nome));
     
     if (validateCognome(cognome));
@@ -27,17 +25,17 @@ function validateNome(nome) {
     var len = nome.length;
 
     if (len == 0 || !(/^[A-Za-z\s]+$/.test(nome)) ) {
-        alert("Devi inserire il tuo nome");
+        alert("Inserisci un nome valido");
         return false;
     }
 
     if (len < 2){
-        alert("Il tuo nome non può essere minore di 2 lettere");
+        alert("Inserisci un nome di almeno 2 lettere");
         return false;
     }
 
     if (! isNaN(nome)) {
-        alert ("Il tuo nome non può essere costituito da numeri");
+        alert ("Non inserire numeri nel campo \"nome\"");
         return false; 
     }
 }
@@ -47,17 +45,17 @@ function validateCognome(cognome) {
     var len = cognome.length;
 
     if (len == 0 || !(/^[A-Za-z\s]+$/.test(cognome))) {
-        alert("Devi inserire il tuo cognome");
+        alert("Inserisci un cognome valido");
         return false;
     }
 
     if (len < 2){
-        alert("Il tuo cognome non può essere minore di 2 lettere");
+        alert("Inserisci un cognome di almeno 2 lettere");
         return false;
     }
 
     if (! isNaN(cognome)) {
-        alert ("Il tuo cognome non può essere costituito da numeri");
+        alert ("Non inserire numeri nel campo \"cognome\"");
         return false; 
     }
 }
@@ -67,12 +65,12 @@ function validateUserName(username) {
     var len = username.length;
 
     if (len == 0) {
-        alert("Devi inserire il tuo username");
+        alert("Inserisci un username");
         return false;
     }
 
     if (len < 2) {
-        alert("Il tuo nome utente non può avere meno di due caratteri");
+        alert("Inserisci un nome utente di almeno 2 lettere");
         return false;
     }
 }
@@ -83,7 +81,7 @@ function validateEmail(email) {
     var len = email.length;
 
     if (len == 0){
-        alert("Devi inserire la tua mail");
+        alert("Inserisci una email");
         return false;
     }
 
@@ -100,7 +98,7 @@ function validatePassword(pass1, pass2) {
     var len2 = pass2.length;
 
     if (len1 == 0) {
-        alert("Devi inserire la password");
+        alert("Inserisci una password");
         return false;
     }
 
