@@ -32,13 +32,14 @@ form {
 
 #submit {
     position: relative;
-    float:left;
+    float: right;
     width: 40%;
+    
 }
 
 #reset {
     position: relative;
-    float: right;
+    float:left;
     width: 40%;
 }
 
@@ -96,4 +97,8 @@ button {
 
 .biglietto {
     font-size: 19px;
+}
+
+#already_registered {
+    margin-top: 40px;
 }
