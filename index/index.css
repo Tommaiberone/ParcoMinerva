@@ -106,5 +106,11 @@
     margin-left: 22%;
 }
 
+@keyframes pop {
+    50%  {
+      transform: scale(1.25);
+    }
+  }
+
 
 
