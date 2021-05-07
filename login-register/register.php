@@ -14,49 +14,53 @@
 
     <body>
         <?php
-<<<<<<< HEAD
-            $dbconn = pg_connect("host = localhost
-                                port = 5432
-                                dbname = PDM
-                                user = postgres
-                                password = 1234") 
-                                or die ("Impossibile connettersi: " .pg_last_error());
-        ?>
-
-        
-
-
-
-
-
-
-=======
+            // Connessione al DB
             $dbconn = pg_connect("  host = localhost
                                     port = 5432
                                     dbname = PDM
                                     user = postgres
                                     password = 1234") 
                                     or die ("Impossibile connettersi: " . pg_last_error());
-            if (!isset($_POST['submit']))
-                header("Location: ../index/index.html");
+
+            //se non è stato premuto il bottone submitButton
+            if (!isset($_POST['submitButton']))
+                header("Location: ./register.html");
+
+            //se submitButton è stato premuto, verifica che non esista già nome utente o email nel DB
             else {
-                $email= $_POST['email'];
-                $verifica_email= "select * from utente where email = $1";
-                $result = pg_query_params($dbconn, $verifica_email, array($email));
-                if (pg_fetch_array($result, null, PGSQL_ASSOC))
-                    echo "beshtia";
+                $email = $_POST['inputEmail'];
+                $q1 = "select * from utente where email = $1";
+                $result = pg_query_params($dbconn, $q1, array($email));
+
+                //se email già presente nel DB
+                if ($line = pg_fetch_array($result, null, PGSQL_ASSOC))
+                    echo "  <br><br><br><br><br><br>
+                            <h1 class = 'text-center'> Sei già registrato, clicca <a href = './login.html'><b>qui</b></a> per accedere. </h1>";
+
+                //se email non presente nel DB
                 else {
-                    $username= $_POST['username'];
-                    $password= md5($_POST['password']);
-                    $email= $_POST['email'];
-                    $inserimento= "insert into utente values ($1,$2,$3)";
-                    $result = pg_query_params($dbconn, $inserimento, 
-                              array($username, $password, $email));
+                    $username= $_POST['inputUsername'];
+                    $q2 = "select * from utente where username = $1";
+                    $result = pg_query_params($dbconn, $q2, array($username));
+
+                    // se nome utente già esistente, sceglierne un altro
+                    if ($line = pg_fetch_array($result, null, PGSQL_ASSOC))
+                        echo "  <br><br><br><br><br><br>
+                                <h1 class = 'text-center'> Il nome utente esiste già, clicca <a href = './register.html'><b>qui</b></a> per sceglierne un altro. </h1>";                    
+                    
+                    //se invece il nome utente non esiste già -- tutto corretto, l'utente verrà registrato
+                    else{
+                        $password= md5($_POST['inputPassword']);
+                        $email= $_POST['inputEmail'];
+                        $q3 = "insert into utente values ($1,$2,$3)"; //RICORDA: email, username, password in questo esatto ordine nel database
+                        $result = pg_query_params($dbconn, $q3, 
+                                array($email, $username, $password));
+                        if ($result){
+                            header("Location: ./benvenuto.php?name=$username");
+                        }
+                    }
                 }
             }
-                                    
->>>>>>> 55e806b1e5c3bd56dc2c54d47e4cf26d24f285c9
-
         ?>
     </body>
 </html>

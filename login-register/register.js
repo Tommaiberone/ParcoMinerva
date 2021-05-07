@@ -1,6 +1,7 @@
 
 // wrapper to form validation functions
-function validateForm() {
+function validateForm(event) {
+
     var nome = $("#nome").val();
     var cognome = $("#cognome").val();
     var username = $("#username").val();
@@ -8,16 +9,15 @@ function validateForm() {
     var pass1 = $("#password1").val();
     var pass2 = $("#password2").val();
 
-    if (validateNome(nome));
+    if (! validateNome(nome)) return false; 
     
-    if (validateCognome(cognome));
+    if (! validateCognome(cognome)) return false; 
 
-    if (validateUserName(username));
+    if (! validateUserName(username)) return false; 
 
-    if (validateEmail(email));
+    if (! validateEmail(email)) return false;
 
-    if (validatePassword(pass1, pass2));
-
+    if (! validatePassword(pass1, pass2)) return false; 
 }
 
 // validazione del nome
@@ -38,6 +38,7 @@ function validateNome(nome) {
         alert ("Non inserire numeri nel campo \"nome\"");
         return false; 
     }
+    return true;
 }
 
 //validazione del cognome
@@ -57,7 +58,9 @@ function validateCognome(cognome) {
     if (! isNaN(cognome)) {
         alert ("Non inserire numeri nel campo \"cognome\"");
         return false; 
+        
     }
+    return true;
 }
 
 //validazione dello user name
@@ -73,6 +76,7 @@ function validateUserName(username) {
         alert("Inserisci un nome utente di almeno 2 lettere");
         return false;
     }
+    return true;
 }
 
 //validazione dell'email
@@ -89,10 +93,10 @@ function validateEmail(email) {
         alert("La tua mail deve essere del tipo nome@dominio.com/it");
         return false;
     }
+    return true;
 }
 
 //validazione delle password
-
 function validatePassword(pass1, pass2) {
     var len1 = pass1.length;
     var len2 = pass2.length;
@@ -111,4 +115,5 @@ function validatePassword(pass1, pass2) {
         alert("La password deve avere almeno 8 caratteri e al massimo 22");
         return false;
     }
+    return true;
 }

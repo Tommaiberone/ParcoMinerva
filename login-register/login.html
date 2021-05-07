@@ -22,20 +22,20 @@
         <!-- Form di login -->
         <div class = "login-form border border-primary border-2">
 
-            <form action="" method="post">
+            <form action="login.php" method="POST">
 
                 <h2 class="text-center main-title"> Accedi </h2>
 
                 <div class="form-group">
-                    <input type="text" class="form-control rounded rounded-2" placeholder="Nome utente" required="required">
+                    <input type="text" name = "inputEmail" class="form-control rounded rounded-2" placeholder="Nome utente o email" required="required">
                 </div>
                 
                 <div class="form-group">
-                    <input type="password" class="form-control rounded rounded-2" placeholder="Password" required="required">
+                    <input type="password" name = "inputPassword" class="form-control rounded rounded-2" placeholder="Password" required="required">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block rounded rounded-2">Accedi</button>
+                    <button type="submit" name = "loginButton" class="btn btn-primary btn-block rounded rounded-2">Accedi</button>
                 </div>
 
                 <div class="clearfix">
