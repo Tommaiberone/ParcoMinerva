@@ -53,3 +53,17 @@ function loadWeather () {
             sunsetDOM.textContent = `${sunsetGMT.toLocaleDateString()}, ${sunsetGMT.toLocaleTimeString()}`;
         })
 }
+
+function Bump_on_click () {
+    window.scroll(0,870);
+    $('#go-login').css({'animation' : 'pop 0.3s ease-in-out', 'animation-delay': '0.6s', 'animation-duration': '0.6s'} );
+    setTimeout(reset_bump, 1200);
+}
+
+function reset_bump () {
+    $('#go-login').css({'animation' : 'none'});
+}
+
+
+
+

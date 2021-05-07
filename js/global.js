@@ -10,19 +10,18 @@ window.onscroll = function() {
     //Hides the bar if the cursor is under a certain threshold 
     hoverSpace.on('mousemove', function(event) {
             
-        if(event.clientY < 150) {
+        if(event.clientY < 150)
             barra.style.top = "0";
-        } else if (window.scrollY > 100){
+        else if (window.scrollY > 100)
             barra.style.top = "-300px";
-        }
     });
         
     //Hides the bar if the cuser scrolls down the page
-    if (prevScrollpos > currentScrollPos) {
+    if (prevScrollpos > currentScrollPos) 
         barra.style.top = "0";
-    } else if(window.scrollY > 100){
+    else if(window.scrollY > 100)
         barra.style.top = "-300px";
-    }
+
     prevScrollpos = currentScrollPos;
 
 }
@@ -38,6 +37,17 @@ function update(val, num) {
 
     $('#importo-totale').text(total);
 }
+
+function Bump_on_click_global () {
+    window.scroll(0,870);
+    $('.offerte .card').css({'animation' : 'pop 0.3s ease-in-out', 'animation-delay': '0.6s', 'animation-duration': '0.6s'} );
+    setTimeout(reset_bump_global, 1200);
+}
+
+function reset_bump_global () {
+    $('.offerte .card').css({'animation' : 'none'});
+}
+
 
     
 

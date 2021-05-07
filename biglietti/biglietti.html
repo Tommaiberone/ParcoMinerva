@@ -40,7 +40,7 @@
                     <li>
                         <div class="row row-cols-3">
                             <div class="col">
-                                <div class = "card border border-primary border-2 text-center" id = "tickbase">
+                                <div class = "card border border-primary border-2 text-center" id = "tickbase" onclick="Bump_on_click()">
                                     <div class="card-header"> <h5> Biglietto base </h5> </div>
                                     <img src="./immagini/base.jpg" class="card-img-top" id = "base">
                                     <div class = "card-body">
@@ -57,7 +57,7 @@
                             </div>
 
                             <div class="col">
-                                <div class = "card border border-primary border-2 text-center" id = "tickbasex">
+                                <div class = "card border border-primary border-2 text-center" id = "tickbasex" onclick="Bump_on_click()">
                                     <div class="card-header"> <h5> Biglietto base +</h5> </div>
                                     <img src="./immagini/base+.png" class="card-img-top" id = "basex">
                                     <div class = "card-body">
@@ -74,7 +74,7 @@
                             </div>
                             
                             <div class="col">
-                                <div class = "card border border-primary border-2 text-center" id = "tickvip"> 
+                                <div class = "card border border-primary border-2 text-center" id = "tickvip" onclick="Bump_on_click()"> 
                                     <div class="card-header"> <h5> Biglietto VIP </h5> </div>
                                     <img src="./immagini/vip.jpg" class="card-img-top" id = "VIP">
                                     <div class = "card-body">
@@ -98,7 +98,7 @@
                     <li>
                         <div class="row">
                             <div class="col">
-                                <div id="large-card" class = "card border border-primary border-2 text-center large-card">
+                                <div id="large-card" class = "card border border-primary border-2 text-center large-card" onclick="Bump_on_click()">
                                     <div class="card-header"> <h3> Abbonamento annuale </h3> </div>
                                     <img src="./immagini/abbonamento.jpg" class="card-img-top" style="margin-top: 4%; transform: scale(1); width: 80% !important;">
                                     <div class = "card-body">
@@ -121,9 +121,10 @@
                         <div class="row">
                             <div class="col">
                                 <br>
-                                <div class = "container text-center rounded" >
+                                <div class = "container text-center rounded" id="go-login">
                                     <p> <h5> <u> Devi effettuare l'accesso per poter comprare un biglietto! </u> </h5></p>
-                                    <a id = "login" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html" style = "margin-bottom: 2%;"> <b> Accedi </b> </a>
+                                    <a id = "login" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html" 
+                                       style = "margin-bottom: 2%;"> <b> Accedi </b> </a>
                                 </div>
                             </div>
                         </div>

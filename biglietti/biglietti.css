@@ -177,3 +177,9 @@ li > h3, li > p {
     display: table-cell; 
     vertical-align: middle !important; 
 }
+
+@keyframes pop {
+    50%  {
+      transform: scale(1.25);
+    }
+  }
