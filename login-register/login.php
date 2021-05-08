@@ -53,7 +53,7 @@
                     //se password corrisponde nel DB
                     else {
                         $nome = $line['username'];
-                        echo "<h1> Bentornato $nome </h1>";
+                        header("Location: ./bentornato.php?name=$nome");
                     }
                 }
             }
