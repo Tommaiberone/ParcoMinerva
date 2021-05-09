@@ -20,6 +20,19 @@ function validateForm(event) {
     if (! validatePassword(pass1, pass2)) return false; 
 }
 
+function validateFormIntestatario(event) {
+
+    var email = $("#email").val();
+    var nome = $("#nome").val();
+    var cognome = $("#cognome").val();
+    
+    if (! validateNome(nome)) return false; 
+    
+    if (! validateCognome(cognome)) return false; 
+
+    if (! validateEmail(email)) return false;
+}
+
 // validazione del nome
 function validateNome(nome) {
     var len = nome.length;

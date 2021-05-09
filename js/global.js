@@ -26,6 +26,7 @@ window.onscroll = function() {
 
 }
 
+// Aggiorna il costo totale dei biglietti scelti
 function update(val, num) {
     
     $('#range-value' + num).text(val)
@@ -36,6 +37,12 @@ function update(val, num) {
     total += parseInt($('#range-value4').text())*100;
 
     $('#importo-totale').text(total);
+}
+
+// Verica che si sia comprato almeno un biglietto e rimanda alla schermata di ringraziamento
+function verify() {
+    if($('#importo-totale').text()==0) alert("Scegli almeno un biglietto da acquistare");
+    else window.location.href = "../../index/grazie.html";
 }
 
 function Bump_on_click_global () {

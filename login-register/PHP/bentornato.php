@@ -31,7 +31,7 @@
                 echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$nome</i></h2>"
             ?>
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary btn-block rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            <button type="button" class="btn btn-primary btn-block rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
                     style="height: 60px; width: 400px; margin-top: 30px;">
                 <h4>Compra subito i biglietti!</h4>
             </button>
@@ -43,7 +43,7 @@
             
         </div>
             
-        <!-- Modal -->
+        <!-- Modal per tornare alla home -->
         <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-2" 
                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
@@ -69,8 +69,8 @@
         </div>
 
 
-        <!-- Modal -->
-        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+        <!-- Modal per selezionare le quantità dei biglietti -->
+        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -128,8 +128,62 @@
                     </div>
 
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal">Indietro</button>
-                        <button type="button" class="btn btn-primary rounded-pill">Acquista ora!</button>
+                        <button class="btn btn-secondary rounded-pill " data-bs-dismiss="modal">Indietro</button>
+                        <button class="btn btn-primary rounded-pill" onclick="verify();">Acquista ora!</button>
+                        <button class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
+                            Regala ad un amico!<span class="badge bg-secondary" style="margin-left: 5px;"> NEW</span>
+                        </button>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal per regalare i biglietti -->
+        <div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-2" 
+                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+
+                <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
+
+                    <div class="modal-header">
+                        <h3 class="modal-title">Ancora un attimo...</h3>
+                    </div>
+
+                    <div class="modal-body text-center">
+
+                        <h4 style="margin-bottom:20px;">A chi vuoi intestare i biglietti? </h4>
+
+                        <form id="intestatario" name = "intestatario" novalidate onsubmit="return validateFormIntestatario();">
+                            <div class="form-group">
+                                <input  type="text" id = "email" name = "inputEmail" class="form-control rounded rounded-2" 
+                                        placeholder="Email alla quale manderemo i biglietti" required="required">
+                            </div>  
+                            <div class="form-group">
+                                <input  type="text" id = "Nome" name = "inputNome" class="form-control rounded rounded-2"
+                                        placeholder="Nome dell'intestatario" required="required">
+                            </div>  
+                            <div class="form-group">
+                                <input  type="text" id = "Cognome" name = "inputCognome" class="form-control rounded rounded-2"
+                                        placeholder="Cognome dell'intestatario" required="required">
+                            </div>
+                        </form>
+
+                        <div class="form-group">
+                            <textarea id = "auguri" name = "auguri" class="form-control rounded rounded-2" form="intestatario"
+                                    placeholder="Inserisci un messaggio d'auguri!" rows="5"></textarea>
+                        </div>  
+
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" 
+                            data-bs-dismiss="modal">Indietro</button>
+                        <a href="../../index/grazie.html" style="position: relative !important; width:100% !important;">
+                            <button type="button" class="btn btn-primary rounded-pill" >Regala ora!</button>
+                        </a>
                     </div>
                     
                 </div>
