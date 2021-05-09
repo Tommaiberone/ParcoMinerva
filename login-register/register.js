@@ -20,6 +20,19 @@ function validateForm(event) {
     if (! validatePassword(pass1, pass2)) return false; 
 }
 
+function validateFormIntestatario(event) {
+
+    var email = $("#email").val();
+    var nome = $("#nome").val();
+    var cognome = $("#cognome").val();
+    
+    if (! validateNome(nome)) return false; 
+    
+    if (! validateCognome(cognome)) return false; 
+
+    if (! validateEmail(email)) return false;
+}
+
 // validazione del nome
 function validateNome(nome) {
     var len = nome.length;
@@ -111,7 +124,7 @@ function validatePassword(pass1, pass2) {
         return false;
     }
 
-    if (len < 8 || len > 22) {
+    if (len1 < 8 || len1 > 22) {
         alert("La password deve avere almeno 8 caratteri e al massimo 22");
         return false;
     }
