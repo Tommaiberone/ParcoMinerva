@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>PDM - Registrazione</title>
 
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel = "stylesheet" type = "text/css" href = "../css/global.css">
-        <link rel="stylesheet" href="login-register.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "../../css/global.css">
+        <link rel="stylesheet" href="../login-register.css">
 
     </head>
 
@@ -18,20 +18,19 @@
         <!-- Navigation bar -->
         <script src="../js/Top_bar.js"></script>
 
-        
         <?php 
-            // verifica che sia stato passato un nome alla pagina bentornato.php, altrimenti reindirizza a login.html
+            // verifica che sia stato passato un nome alla pagina benvenuto.php, altrimenti reindirizza a register.html
             if (! (isset($_GET['name'])))
-                header("Location: ./login.html");
+                header("Location: ../register.html");
         ?>
 
-        <div class = "container border border-primary border-2 text-center" id = "bentornatoContainer">
+        <div class = "container-messages container border border-primary border-2 text-center">
             <?php 
                 $nome = $_GET['name'];
-                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$nome</i></h2>
-                      <h3 class = 'text-center'> Clicca sul bottone seguente per comprare il tuo biglietto </h3>";
+                echo "<h2 class='text-center main-title'> Benvenuto <i class='text-primary'>$nome</i></h2>
+                      <h3 class = 'text-center'> Clicca sul bottone seguente per accedere </h3>";
             ?>
-            <a href = "./login.html" class="btn btn-primary btn-block rounded rounded-2">AAAAAAAAA</a>
+            <a href = "../login.html" class="btn btn-primary btn-block rounded rounded-2">Accedi</a>
         </div>
 
 
