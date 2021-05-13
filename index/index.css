@@ -4,12 +4,13 @@
 
 /* Slideshow styles */
 .carousel{
-    margin: 1% 15% 20px 15%;
+    margin: 1% 15% 5% 15%;
 }
 
 .carousel-inner{
 	position:relative;
     height: 750px;
+    width: 100%;
     border-radius: 40px;
     background-color: black;
     color: white;

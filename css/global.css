@@ -39,15 +39,16 @@ a.nav-link:hover, a.nav-link.active {
 
 #Copyright{
     text-align: right;
+    margin-bottom: 0%;
     margin-right: 1%;
-    margin-bottom: -1%;
     font-size: 15px;
     color:black;
 }
 
 /* Whole page wrapper*/
 #Wrapper {
-    min-height: 100vh;
+    min-height: 10%;
+    width: 100%;
     position: relative;
 }
 
