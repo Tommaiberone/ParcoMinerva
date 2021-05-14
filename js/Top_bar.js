@@ -36,13 +36,20 @@ var contatti = ''+
                                 //page content does not cover the entire screen)
     '        <div id = "HoverSpace" class = "container-fluid sticky-top">'+
     '            <br>'+
-    '            <nav id = "navibar" class = "navbar navbar-expand-lg navbar-light  border border-primary border-2 shadow ms-0 me-0 " style = "border-radius: 25px; background-color: #e3f2fd;">'+
-    ''+
+    '            <nav id = "navibar" class = "navbar navbar-expand-md navbar-light  border border-primary border-2 shadow ms-0 me-0 " style = "border-radius: 25px; background-color: #e3f2fd;">'+
+    ''+             
     '                <!-- Logo -->'+
     '                <a class = "navbar-brand ms-3" href = "../index/index.html">'+
-    '                    <img src = "../images/logo-sapienza-new.jpg" style = "width: 120px; height: 40px; margin-top: -10%; margin-bottom: -7%;" class = "rounded rounded-pill">    '+
+    '                    <img src = "../images/logo-sapienza-new.jpg" style = "width: 120px; height: 40px; margin-top: -10%; margin-bottom: -7%; margin-left: -8%;" class = "rounded rounded-pill">'+
     '                </a>'+
     ''+
+    ''+
+    '                <button style = "margin-right:3%;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">' +
+    '                    <span  class="navbar-toggler-icon"></span>'+
+    '                </button>'+
+    ''+
+    ''+
+    '             <div class="collapse navbar-collapse" id="navbarSupportedContent">'+
     '                <!-- Links Home - Attrazioni - Contatti - Biglietti -->'+
     '                <ul class = "navbar-nav ms-auto">'+
     '                    <li class = "nav-item">'+
@@ -72,6 +79,7 @@ var contatti = ''+
     '                        <a id = "login" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html"> <b> Accedi </b> </a>'+
     '                    </li>'+
     '                </ul>'+
+    '              </div>'+
     '            </nav>'+
     '        </div>';
 	

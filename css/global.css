@@ -29,6 +29,8 @@ body {
     font-size: 16px;
 }
 
+
+
 a.nav-link:hover, a.nav-link.active {
     color: #0275d8 !important;
 }
@@ -54,8 +56,26 @@ a.nav-link:hover, a.nav-link.active {
 
 /* Bottom bar styles */ 
 #bottom_bar {
-    position: absolute;
+    position: relative;
     bottom: 0%;
     width: 100%;
     display: inline-flex;
+}
+
+
+
+
+
+
+/* Smartphone view */
+@media only screen and (max-width: 1024px) {
+    
+    .nav-item {
+        margin-left: 2%;
+    }
+    
+    #signup, #login {
+        margin-top: 1%;
+    }
+    
 }
