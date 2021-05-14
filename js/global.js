@@ -20,7 +20,7 @@ window.onscroll = function() {
     if (prevScrollpos > currentScrollPos) 
         barra.style.top = "0";
     else if(window.scrollY > 100)
-        barra.style.top = "-300px";
+        barra.style.top = "-500px";
 
     prevScrollpos = currentScrollPos;
 

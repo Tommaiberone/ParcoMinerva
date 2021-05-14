@@ -32,11 +32,11 @@
             ?>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-block rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
-                    style="height: 60px; width: 400px; margin-top: 30px;">
+                    style="height: 50%; width: 80%; margin-top: 30px;">
                 <h4>Compra subito i biglietti!</h4>
             </button>
 
-            <br><br><br><br>
+            <br><br><br>
             <h4 class = 'text-center'>
                 <a type="button" class = "text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><b><u>Torna alla home</u></b></a>
             </h4>
