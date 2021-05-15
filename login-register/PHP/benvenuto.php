@@ -15,9 +15,6 @@
 
     <body>
 
-        <!-- Navigation bar -->
-        <script src="../js/Top_bar.js"></script>
-
         <?php 
             // verifica che sia stato passato un nome alla pagina benvenuto.php, altrimenti reindirizza a register.html
             if (! (isset($_GET['name'])))
@@ -33,9 +30,6 @@
             <a href = "../login.html" class="btn btn-primary btn-block rounded rounded-2">Accedi</a>
         </div>
 
-
-        <!-- Bottom Bar -->
-        <script src="../js/Bottom.js"></script>
 
         <!-- Optional JS scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

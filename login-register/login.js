@@ -4,10 +4,17 @@ function validateForm(event) {
 
     var email = $("#email").val();
     var pass = $("#password").val();
+    var checkbox = $('#checkBOX').is(":checked");
 
     if (! validateEmail(email)) return false;
 
     if (! validatePassword(pass)) return false; 
+
+    rememberMeCheck(checkbox, email);
+
+
+
+
 }
 
 //validazione dell'email
@@ -41,4 +48,28 @@ function validatePassword(pass) {
         return false;
     }
     return true;
+}
+
+// validazione del remember me
+//N.B: se "ricordati di me" è checkato, lo username viene salvato nel localStorage, e verrà ricordato anche se il browser sarà chiuso
+//     se "ricordati di me" NON è checkato, lo username viene salvato nel sessionStorage, e verrà dimenticato alla chiusura del browser 
+function rememberMeCheck(checkbox, email){
+
+    if (checkbox) localStorage.setItem("email", email);
+    else sessionStorage.setItem("email", email);
+}
+
+
+// verifica che l'utente sia già loggato: se loggato reindirizza alla schermata di acquisto dei biglietti
+function checkStorage() {
+    if (sessionStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + sessionStorage.getItem("email");
+
+    else if (localStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("email");
+}
+
+// logout -- pulisce sia localstorage che sessionstorage e reindirizza alla home
+function logout() {
+    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href = '../../index/index.html';
 }

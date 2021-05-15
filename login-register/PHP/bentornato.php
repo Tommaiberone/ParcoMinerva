@@ -5,7 +5,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>PDM - Registrazione</title>
+        <title>PDM - Accedi</title>
 
         <link rel="stylesheet" href="../../css/bootstrap.css">
         <link rel = "stylesheet" type = "text/css" href = "../../css/global.css">
@@ -14,9 +14,6 @@
     </head>
 
     <body>
-
-        <!-- Navigation bar -->
-        <script src="../js/Top_bar.js"></script>
 
         
         <?php 
@@ -35,10 +32,15 @@
                     style="height: 50%; width: 80%; margin-top: 30px;">
                 <h4>Compra subito i biglietti!</h4>
             </button>
+            
+            <button type="button" class="btn btn-primary btn-block rounded-pill" style="height: 50%; width: 80%; margin-top: 30px;" onclick = "logout();">
+                <h4>Logout</h4>
+            </button>
+
 
             <br><br><br>
             <h4 class = 'text-center'>
-                <a type="button" class = "text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><b><u>Torna alla home</u></b></a>
+                <a type="button" href="../../index/index.html" class = "text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><b><u>Torna alla home</u></b></a>
             </h4>
             
         </div>
@@ -56,7 +58,7 @@
                     </div>
 
                     <div class="modal-body text-center">
-                        Sei sicuro di voler tornare alla Home? Dovrai effettuare nuovamente il login per acquistare i biglietti.
+                        Sei sicuro di voler tornare alla Home?
                     </div>
 
                     <div class="modal-footer">
@@ -193,7 +195,7 @@
         <!-- Optional JS scripts-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src = "../../js/global.js" async></script>
-        <script src = "../register.js"></script>
+        <script src = "../login.js"></script>
 
         <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
         <script src = "../../js/bootstrap.bundle.js"></script>

@@ -130,3 +130,11 @@ function validatePassword(pass1, pass2) {
     }
     return true;
 }
+
+
+// verifica che l'utente sia già loggato: se loggato reindirizza alla schermata di acquisto dei biglietti
+function checkStorage() {
+    if (sessionStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + sessionStorage.getItem("email");
+
+    else if (localStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("email");
+}
