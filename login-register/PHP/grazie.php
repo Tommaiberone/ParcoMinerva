@@ -7,9 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title> PDM - Accesso </title>
 
-        <link rel="stylesheet" href="../css/bootstrap.css">
-        <link rel = "stylesheet" type = "text/css" href = "../css/global.css">
-        <link rel="stylesheet" href="login-register.css">
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "../../css/global.css">
+        <link rel="stylesheet" href="../login-register.css">
 
     </head>
     
@@ -21,8 +21,17 @@
 
         <br><br><br><br><br>
 
+        <?php
+            $email = $_GET['name'];
+            
+            
+            //mailer here
+
+        ?>
+
+
         <h2 class = 'text-center' style="color: #007bff;">
-            <a type="button" href="index.html"><b><u>Torna alla home</u></b></a>
+            <a type="button" href="../../index/index.html"><b><u>Torna alla home</u></b></a>
         </h2>
 
         <!-- Optional JS scripts-->

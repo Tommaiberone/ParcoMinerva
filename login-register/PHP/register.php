@@ -67,14 +67,13 @@
                     
                     //se invece il nome utente non esiste già -- tutto corretto, l'utente verrà registrato
                     else{
-                        
                         $password= md5($_POST['inputPassword']);
                         $email= $_POST['inputEmail'];
                         $q3 = "insert into utente values ($1,$2,$3)"; //RICORDA: email, username, password in questo esatto ordine nel database
                         $result = pg_query_params($dbconn, $q3, 
                                 array($email, $username, $password));
                         if ($result){
-                            header("Location: benvenuto.php?name=$username");
+                            header("Location: benvenuto.php?name=$email");
                         }
                     }
                 }

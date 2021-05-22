@@ -132,7 +132,15 @@
 
                     <div class="modal-footer">
                         <button class="btn btn-secondary rounded-pill " data-bs-dismiss="modal">Indietro</button>
-                        <button class="btn btn-primary rounded-pill" onclick="verify();">Acquista ora!</button>
+                        
+                        <!-- form per inviare email dell'utente a grazie.php -->
+                        <?php
+                            $email = $_GET['name'];
+                            echo    "<form action='./grazie.php?name=$email' method='POST' novalidate onsubmit='return verify();'>
+                                        <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
+                                    </form>"
+                        ?>
+
                         <button class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
                             Regala ad un amico!<span class="badge bg-secondary" style="margin-left: 5px;"> NEW</span>
                         </button>
@@ -160,21 +168,23 @@
 
                         <form id="intestatario" name = "intestatario" novalidate onsubmit="return validateFormIntestatario();">
                             <div class="form-group">
-                                <input  type="text" id = "email" name = "inputEmail" class="form-control rounded rounded-2" 
+                                <!-- Email da passare al grazie.php, da scrivere nella mail da inviare all'amico --> 
+                                <input  type="text" id = "emailAmico" name = "inputEmail" class="form-control rounded rounded-2" 
                                         placeholder="Email alla quale manderemo i biglietti" required="required">
                             </div>  
                             <div class="form-group">
-                                <input  type="text" id = "Nome" name = "inputNome" class="form-control rounded rounded-2"
+                                <input  type="text" id = "nomeAmico" name = "inputNome" class="form-control rounded rounded-2"
                                         placeholder="Nome dell'intestatario" required="required">
                             </div>  
                             <div class="form-group">
-                                <input  type="text" id = "Cognome" name = "inputCognome" class="form-control rounded rounded-2"
+                                <input  type="text" id = "CognomeAmico" name = "inputCognome" class="form-control rounded rounded-2"
                                         placeholder="Cognome dell'intestatario" required="required">
                             </div>
                         </form>
 
                         <div class="form-group">
-                            <textarea id = "auguri" name = "auguri" class="form-control rounded rounded-2" form="intestatario"
+                            <!-- Messaggio da passare al grazie.php, da scrivere nella mail da inviare all'amico -->
+                            <textarea id = "auguri" name = "messaggioAuguriAmico" class="form-control rounded rounded-2" form="intestatario"
                                     placeholder="Inserisci un messaggio d'auguri!" rows="5"></textarea>
                         </div>  
 
@@ -184,11 +194,10 @@
                     <div class="modal-footer">
                         <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" 
                             data-bs-dismiss="modal">Indietro</button>
-                        <a href="../../index/grazie.html" style="position: relative !important; width:100% !important;">
+                        <a style="position: relative !important; width:100% !important;">
                             <button type="button" class="btn btn-primary rounded-pill" >Regala ora!</button>
                         </a>
                     </div>
-                    
                 </div>
             </div>
         </div>

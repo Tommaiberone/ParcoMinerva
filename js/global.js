@@ -39,10 +39,15 @@ function update(val, num) {
     $('#importo-totale').text(total);
 }
 
-// Verica che si sia comprato almeno un biglietto e rimanda alla schermata di ringraziamento
+// Verifica che si sia comprato almeno un biglietto e rimanda alla schermata di ringraziamento
 function verify() {
-    if($('#importo-totale').text()==0) alert("Scegli almeno un biglietto da acquistare");
-    else window.location.href = "../../index/grazie.html";
+    if($('#importo-totale').text()==0){
+        alert("Scegli almeno un biglietto da acquistare");
+        return false;
+    } return true;
+
+    
+    //else window.location.href = "../../index/grazie.html";
 }
 
 function Bump_on_click_global () {
@@ -73,10 +78,10 @@ function login_signup_hide (){
 // logout -- pulisce sia localstorage che sessionstorage e reindirizza alla home
 function logout() {
     if (confirm ("Sei sicuro di voler effettuare il logout?")) {
-        alert("Hai effettuato il logout con successo");
         localStorage.clear();
         sessionStorage.clear();
         window.location.href = '../../index/index.html';
+        alert("Hai effettuato il logout con successo");
     }    
 }
 
