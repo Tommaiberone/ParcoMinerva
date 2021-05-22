@@ -56,5 +56,29 @@ function reset_bump_global () {
 }
 
 
+// nasconde/visualizza i bottoni di login, registrazione e logout
+function login_signup_hide (){
+    if (sessionStorage.getItem("email") || localStorage.getItem("email")) {
+        $("#login").css("display","none");
+        $("#signup").css("display","none");
+        $("#logout").css("display","inline");
+    }
+    /*else {
+        $("#login").css("display","inline");
+        $("#signup").css("display","inline");
+        $("#logout").css("display","none");
+    }*/
+}   
+
+// logout -- pulisce sia localstorage che sessionstorage e reindirizza alla home
+function logout() {
+    if (confirm ("Sei sicuro di voler effettuare il logout?")) {
+        alert("Hai effettuato il logout con successo");
+        localStorage.clear();
+        sessionStorage.clear();
+        window.location.href = '../../index/index.html';
+    }    
+}
+
     
 

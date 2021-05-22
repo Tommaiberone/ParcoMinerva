@@ -78,6 +78,10 @@ var contatti = ''+
     '                    <li class = "nav-item">'+
     '                        <a id = "login" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html"> <b> Accedi </b> </a>'+
     '                    </li>'+
+    ''+
+    '                    <li class = "nav-item">'+
+    '                        <a id = "logout" type = "button" class = "btn btn-danger rounded" onclick ="logout();"> <b> Logout </b> </a>'+
+    '                    </li>'+
     '                </ul>'+
     '              </div>'+
     '            </nav>'+

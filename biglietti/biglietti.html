@@ -18,7 +18,7 @@
         <title> PDM - Biglietti </title>
     </head>
 
-    <body onload="loadWeather()">
+    <body onload="loadWeather(); login_signup_hide1 ();">
 
         <!-- Navigation bar -->
         <script src="../js/Top_bar.js"></script>
@@ -122,10 +122,9 @@
                             <div class="col">
                                 <br>
                                 <div class = "container text-center rounded" id="go-login">
-                                    <h3> <p> <u> Devi effettuare l'accesso per poter comprare un biglietto! </u></p>
+                                    <h3 id = "compra"> <u> Devi effettuare l'accesso per poter comprare un biglietto! </u></h3>
                                     <a type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html" 
-                                       style = "margin-bottom: 2%; width: 150px !important;"> <b> Accedi </b> </a>
-                                    </h3>
+                                       style = "margin-bottom: 2%; width: 150px !important;" id = "accediBTN"> <b> Accedi </b> </a>
                                 </div>
                             </div>
                         </div>

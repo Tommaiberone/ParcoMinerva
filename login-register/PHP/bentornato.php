@@ -40,12 +40,12 @@
 
             <br><br><br>
             <h4 class = 'text-center'>
-                <a type="button" href="../../index/index.html" class = "text-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop1"><b><u>Torna alla home</u></b></a>
-            </h4>
+                <a type="button" href="../../index/index.html" class = "text-primary" ><b><u>Torna alla home</u></b></a>
+            </h4> <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop1" -->
             
         </div>
-            
-        <!-- Modal per tornare alla home -->
+    
+        <!-- Modal per tornare alla home
         <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-2" 
                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
@@ -69,6 +69,7 @@
                 </div>
             </div>
         </div>
+        --> 
 
 
         <!-- Modal per selezionare le quantità dei biglietti -->

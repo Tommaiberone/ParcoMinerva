@@ -64,6 +64,17 @@ function reset_bump () {
     $('#go-login').css({'animation' : 'none'});
 }
 
+//stessa funzione del global.js ma cambia anche la scritta "Devi effettuare l'accesso per poter comprare un biglietto!" e il bottone accedi in fondo al div biglietti
+function login_signup_hide1 () {
+    if (sessionStorage.getItem("email") || localStorage.getItem("email")) {
+        $("#login").css("display","none");
+        $("#signup").css("display","none");
+        $("#logout").css("display","inline");
+        $("#compra").html(" <u> Clicca qui sotto per comprare il tuo biglietto! </u> ");
+        $("#accediBTN").html("<b> Compra </b>");
+    }
+}
+
 
 
 

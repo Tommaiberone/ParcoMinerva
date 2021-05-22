@@ -67,9 +67,3 @@ function checkStorage() {
     else if (localStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("email");
 }
 
-// logout -- pulisce sia localstorage che sessionstorage e reindirizza alla home
-function logout() {
-    localStorage.clear();
-    sessionStorage.clear();
-    window.location.href = '../../index/index.html';
-}

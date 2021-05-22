@@ -18,6 +18,13 @@ body {
     background-color: rgba(227,242,253,0.5);
 }
 
+#login, #signup {
+    display: inline;
+}
+
+#logout {
+    display:none;
+}
 
 /* Navbar styles */
 #navibar {
