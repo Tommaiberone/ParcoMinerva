@@ -57,8 +57,6 @@ function validatePassword(pass) {
 
 // verifica che l'utente sia già loggato: se loggato reindirizza alla schermata di acquisto dei biglietti
 function checkStorage() {
-    if (sessionStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + sessionStorage.getItem("email");
-
-    else if (localStorage.getItem("email")) window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("email");
+    if (localStorage.getItem("email")) window.location.href = './PHP/bentornato.php?email=' + localStorage.getItem("email");
 }
 

@@ -22,47 +22,63 @@
         <br><br><br><br><br>
 
         <?php
-            $email = $_GET['email'];
-            $nome = $_GET['nome'];
-            $auguri = $_GET['auguri'];
-
             //Include required PHPMailer files
-                require 'PHP/PHPMailer.php';
-                require 'PHP/SMTP.php';
-                require 'PHP/Exception.php';
+                require './Mailer/PHPMailer.php';
+                require './Mailer/SMTP.php';
+                require './Mailer/Exception.php';
+
             //Define name spaces
                 use PHPMailer\PHPMailer\PHPMailer;
                 use PHPMailer\PHPMailer\SMTP;
                 use PHPMailer\PHPMailer\Exception;
+
+            $email = $_GET['email'];
+            //$nome = $_GET['nome']; Non funziona più la funzione per il check del localstorage poi
+            //$auguri = $_GET['auguri'];
+
             //Create instance of PHPMailer
-                $mailer = new PHPMailer();
+                $mail = new PHPMailer();
+
             //Set mailer to use smtp
-                $mailer->isSMTP();
+                $mail->isSMTP();
+
             //Define smtp host
-                $mailer->Host = "smtp.gmail.com";
+                $mail->Host = "smtp.gmail.com";
+
             //Enable smtp authentication
-                $mailer->SMTPAuth = true;
+                $mail->SMTPAuth = true;
+
             //Set smtp encryption type (ssl/tls)
-                $mailer->SMTPSecure = "tls";
+                $mail->SMTPSecure = "tls";
+
             //Port to connect smtp
-                $mailer->Port = "587";
+                $mail->Port = "587";
+
             //Set gmail username
-                $mailer->Username = "parcominerva2021@gmail.com";
+                $mail->Username = "parcominerva2021@gmail.com";
+
             //Set gmail password
-                $mailer->Password = "ParcoDellaMinerva2021";
+                $mail->Password = "ParcoDellaMinerva2021";
+
             //Email subject
-                $mailer->Subject = "I tuoi biglietti!";
+                $mail->Subject = "I tuoi biglietti!";
+
             //Set sender email
-                $mailer->setFrom('Parco della Minerva');
+                $mail->setFrom('parcominerva2021@gmail.com');
+
             //Enable HTML
-                $mailer->isHTML(true);
+                $mail->isHTML(true);
+
             //Email body
-                $mailer->Body = "<h1>Ciao, " . $nome . " </h1></br><p>Ecco a te i tuoi biglietti</p>";
+                $mail->Body = "<h1>Ciao, " . $email . " </h1></br><p>Ecco a te i tuoi biglietti</p>";
+
             //Add recipient
-                $mailer->addAddress("$email");
+                $mail->addAddress("$email");
+
             //Finally send email
-                if ( !($mailer->send()) )
-                    echo "Message could not be sent. Mailer Error: "{$mail->ErrorInfo};
+                if ( !($mail->send()) )
+                    echo "Message could not be sent. Mailer Error: "($mail->ErrorInfo);
+
             //Closing smtp connection
                 $mail->smtpClose();
 

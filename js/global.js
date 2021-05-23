@@ -63,7 +63,7 @@ function reset_bump_global () {
 
 // nasconde/visualizza i bottoni di login, registrazione e logout
 function login_signup_hide (){
-    if (sessionStorage.getItem("email") || localStorage.getItem("email")) {
+    if (localStorage.getItem("email")) {
         $("#login").css("display","none");
         $("#signup").css("display","none");
         $("#logout").css("display","inline");

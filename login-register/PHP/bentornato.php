@@ -18,7 +18,7 @@
         
         <?php 
             // verifica che sia stato passato un nome alla pagina bentornato.php, altrimenti reindirizza a login.html
-            if (! (isset($_GET['email'])))
+            if (!(isset($_GET['email'])))
                 header("Location: ../login.html");
         ?>
 
@@ -112,8 +112,8 @@
                         <!-- form per inviare email dell'utente a grazie.php -->
                         <?php
                             $email = $_GET['email'];
-                            $nome = $_GET['nome'];
-                            echo    "<form action='./grazie.php?email=$email&nome=$nome' method='POST' novalidate onsubmit='return verify();'>
+                            //$nome = $_GET['nome'];
+                            echo    "<form action='./grazie.php?email=$email' method='POST' novalidate onsubmit='return verify();'>
                                         <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
                                     </form>"
                         ?>
