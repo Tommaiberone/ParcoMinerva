@@ -13,6 +13,11 @@ form {
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
+#login-container {
+    width: 25%;
+}
+
+
 .login-form form {
     margin-bottom: 2%;
     padding: 4%;    
@@ -30,10 +35,26 @@ form {
     border-radius: 2px;
 }
 
-#submit {
+#submit, #registrati{
     position: relative;
     float: right;
-    width: 40%;
+}
+
+#submit > button {
+    width: 7vw;
+}
+
+#registrati {
+    width: 25vh;
+}
+
+.form-check {
+    margin-top: 1.5%;
+}
+
+.form-bottom {
+    position: relative;
+    display: inline-block;
 }
 
 #reset {
@@ -45,6 +66,7 @@ form {
 
 .corta {
     display: inline-block;
+    width: 49.6%;
 }
 
 .login-form > button {
@@ -142,7 +164,12 @@ form {
       font-size: 3vw;
     }
 
-    .login-form {
+    #login-container {
+        font-size: 3vw;
+        width: 30px;
+    }
+
+    #register-container {
         font-size: 3vw;
         width: 60%;
     }

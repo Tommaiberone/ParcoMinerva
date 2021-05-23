@@ -20,7 +20,7 @@
         <script src="../js/Top_bar.js"></script>
 
         <!-- Form di login -->
-        <div class = "login-form border border-primary border-2m container">
+        <div id="login-container" class = "login-form border border-primary border-2m container">
 
             <form action="PHP/login.php" method="POST" novalidate onsubmit="return validateForm();">
 
@@ -34,21 +34,17 @@
                     <input type="password" id = "password" name = "inputPassword" class="form-control rounded rounded-2" placeholder="Password" required="required">
                 </div>
 
-                <div class="form-check">
+                <div class="form-check form-bottom">
                     <input class="form-check-input" type="checkbox" id="checkBOX">
                     <label class="form-check-label" for="flexCheckDefault">
                         Ricordati di me
                     </label>
                 </div>
 
-                <div class="form-group">
+                <div id="submit" class="form-group form-bottom">
                     <button type="submit" name = "loginButton" class="btn btn-primary btn-block rounded rounded-2">Accedi</button>
                 </div>
-
                 
-
-                <br>
-
             </form>
             
             <p class="text-center">
