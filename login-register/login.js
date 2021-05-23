@@ -10,11 +10,7 @@ function validateForm(event) {
 
     if (! validatePassword(pass)) return false; 
 
-    rememberMeCheck(checkbox, email);
-
-
-
-
+    //rememberMeCheck(checkbox, email);
 }
 
 //validazione dell'email
@@ -53,11 +49,10 @@ function validatePassword(pass) {
 // validazione del remember me
 //N.B: se "ricordati di me" è checkato, lo username viene salvato nel localStorage, e verrà ricordato anche se il browser sarà chiuso
 //     se "ricordati di me" NON è checkato, lo username viene salvato nel sessionStorage, e verrà dimenticato alla chiusura del browser 
-function rememberMeCheck(checkbox, email){
-
+/*function rememberMeCheck(checkbox, email){
     if (checkbox) localStorage.setItem("email", email);
     else sessionStorage.setItem("email", email);
-}
+}*/
 
 
 // verifica che l'utente sia già loggato: se loggato reindirizza alla schermata di acquisto dei biglietti

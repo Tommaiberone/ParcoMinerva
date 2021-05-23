@@ -25,7 +25,10 @@
         <div class = "container-messages container border border-primary border-2 text-center">
             <?php 
                 $nome = $_GET['name'];
-                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$nome</i></h2>"
+                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$nome</i></h2>";
+                echo    "<script language = 'javascript' type = 'text/javascript'>
+                            localStorage.setItem('email', '$nome');
+                        </script>"
             ?>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-block rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
@@ -33,7 +36,7 @@
                 <h4>Compra subito i biglietti!</h4>
             </button>
             
-            <button type="button" class="btn btn-primary btn-block rounded-pill" style="height: 50%; width: 80%; margin-top: 30px;" onclick = "logout();">
+            <button type="button" class="btn btn-danger btn-block rounded-pill" style="height: 50%; width: 50%; margin-top: 30px;" onclick = "logout();">
                 <h4>Logout</h4>
             </button>
 
@@ -166,7 +169,7 @@
 
                         <h4 style="margin-bottom:20px;">A chi vuoi intestare i biglietti? </h4>
 
-                        <form id="intestatario" name = "intestatario" novalidate onsubmit="return validateFormIntestatario();">
+                        <form action = "" id="intestatario" name = "intestatario" novalidate onsubmit="return validateFormIntestatario();">
                             <div class="form-group">
                                 <!-- Email da passare al grazie.php, da scrivere nella mail da inviare all'amico --> 
                                 <input  type="text" id = "emailAmico" name = "inputEmail" class="form-control rounded rounded-2" 
