@@ -22,10 +22,49 @@
         <br><br><br><br><br>
 
         <?php
-            $email = $_GET['name'];
-            
-            
-            //mailer here
+            $email = $_GET['email'];
+            $nome = $_GET['nome'];
+            $auguri = $_GET['auguri'];
+
+            //Include required PHPMailer files
+                require 'PHPMailer/PHPMailer.php';
+                require 'PHPMailer/SMTP.php';
+                require 'PHPMailer/Exception.php';
+            //Define name spaces
+                use PHPMailer\PHPMailer;
+                use PHPMailer\SMTP;
+                use PHPMailer\Exception;
+            //Create instance of PHPMailer
+                $mailer = new PHPMailer();
+            //Set mailer to use smtp
+                $mailer->isSMTP();
+            //Define smtp host
+                $mailer->Host = "smtp.gmail.com";
+            //Enable smtp authentication
+                $mailer->SMTPAuth = true;
+            //Set smtp encryption type (ssl/tls)
+                $mailer->SMTPSecure = "tls";
+            //Port to connect smtp
+                $mailer->Port = "587";
+            //Set gmail username
+                $mailer->Username = "parcominerva2021@gmail.com";
+            //Set gmail password
+                $mailer->Password = "ParcoDellaMinerva2021";
+            //Email subject
+                $mailer->Subject = "I tuoi biglietti!";
+            //Set sender email
+                $mailer->setFrom('Parco della Minerva');
+            //Enable HTML
+                $mailer->isHTML(true);
+            //Email body
+                $mailer->Body = "<h1>Ciao, " . $nome . " </h1></br><p>Ecco a te i tuoi biglietti</p>";
+            //Add recipient
+                $mailer->addAddress("$email");
+            //Finally send email
+                if ( !($mailer->send()) )
+                    echo "Message could not be sent. Mailer Error: "{$mail->ErrorInfo};
+            //Closing smtp connection
+                $mail->smtpClose();
 
         ?>
 

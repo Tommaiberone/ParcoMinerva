@@ -18,16 +18,16 @@
         
         <?php 
             // verifica che sia stato passato un nome alla pagina bentornato.php, altrimenti reindirizza a login.html
-            if (! (isset($_GET['name'])))
+            if (! (isset($_GET['email'])))
                 header("Location: ../login.html");
         ?>
 
         <div class = "container-messages container border border-primary border-2 text-center">
             <?php 
-                $nome = $_GET['name'];
-                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$nome</i></h2>";
+                $email; = $_GET['email'];
+                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$email</i></h2>";
                 echo    "<script language = 'javascript' type = 'text/javascript'>
-                            localStorage.setItem('email', '$nome');
+                            localStorage.setItem('email', '$email');
                         </script>"
             ?>
             <!-- Button trigger modal -->
@@ -47,33 +47,6 @@
             </h4> <!-- data-bs-toggle="modal" data-bs-target="#staticBackdrop1" -->
             
         </div>
-    
-        <!-- Modal per tornare alla home
-        <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-2" 
-                 aria-labelledby="staticBackdropLabel" aria-hidden="true">
-
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-
-                <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
-
-                    <div class="modal-header">
-                        <h3 class="modal-title">Attenzione!</h3>
-                    </div>
-
-                    <div class="modal-body text-center">
-                        Sei sicuro di voler tornare alla Home?
-                    </div>
-
-                    <div class="modal-footer">
-                        <a type="button" class="btn btn-secondary rounded-pill" data-bs-dismiss="modal" style="width=1000px !important;">Indietro</a>
-                        <a type="button" class="btn btn-primary rounded-pill" href="../../index/index.html">... Alla Home!</a>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        --> 
-
 
         <!-- Modal per selezionare le quantità dei biglietti -->
         <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
@@ -138,8 +111,9 @@
                         
                         <!-- form per inviare email dell'utente a grazie.php -->
                         <?php
-                            $email = $_GET['name'];
-                            echo    "<form action='./grazie.php?name=$email' method='POST' novalidate onsubmit='return verify();'>
+                            $email = $_GET['email'];
+                            $nome = $_GET['nome'];
+                            echo    "<form action='./grazie.php?email=$email&nome=$nome' method='POST' novalidate onsubmit='return verify();'>
                                         <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
                                     </form>"
                         ?>
@@ -197,6 +171,19 @@
                     <div class="modal-footer">
                         <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" 
                             data-bs-dismiss="modal">Indietro</button>
+
+                        <!-- form per inviare email dell'utente a grazie.php -->
+                        <?php
+                            $email = $_GET['email'];
+                            $nome = $_GET['nome'];
+                            $auguri = $_GET['nome'];
+                            echo    "<form action='./grazie.php?email=$email&nome=$nome' method='POST' novalidate onsubmit='return verify();'>
+                                        <a style='position: relative !important; width:100% !important;'>
+                                            <button type='button' class='btn btn-primary rounded-pill' >Regala ora!</button>
+                                        </a>
+                                    </form>"
+                        ?>
+
                         <a style="position: relative !important; width:100% !important;">
                             <button type="button" class="btn btn-primary rounded-pill" >Regala ora!</button>
                         </a>
