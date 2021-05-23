@@ -141,17 +141,37 @@ li > h3, li > p {
     border-radius: 15px !important;
     background-color: rgba(255, 255, 255, 0.5);
     overflow: hidden;
+    height: 100%;
+}
+
+.card-body{
+    height: 40%;
+}
+
+.card .not-last, .card .last {
+    height: 100%;
+}
+
+.card .not-last > li {
+    height: 14%;
+}
+
+.card .last > li {
+    height: 10.3%;
 }
 
 .card-img-top {
     transform: scale(0.98);
     position: relative;
     width: 100% !important;
+    height: 28% !important;
     margin: auto;
     border-radius: 10px;
 }
 
-
+ #large-card .card-img-top {
+     height: 100% !important;
+ }
 
 .list-group-item, .list-group{
     background-color: rgba(255, 255, 255, 0.1) !important;
@@ -188,6 +208,11 @@ li > h3, li > p {
     display: table-cell; 
     vertical-align: middle !important; 
 }
+
+#compra-biglietti {
+    margin-top: 5%
+}
+
 
 @keyframes pop {
     50%  {
