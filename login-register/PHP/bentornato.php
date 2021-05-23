@@ -24,7 +24,7 @@
 
         <div class = "container-messages container border border-primary border-2 text-center">
             <?php 
-                $email; = $_GET['email'];
+                $email = $_GET['email'];
                 echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$email</i></h2>";
                 echo    "<script language = 'javascript' type = 'text/javascript'>
                             localStorage.setItem('email', '$email');

@@ -27,13 +27,13 @@
             $auguri = $_GET['auguri'];
 
             //Include required PHPMailer files
-                require 'PHPMailer/PHPMailer.php';
-                require 'PHPMailer/SMTP.php';
-                require 'PHPMailer/Exception.php';
+                require 'PHP/PHPMailer.php';
+                require 'PHP/SMTP.php';
+                require 'PHP/Exception.php';
             //Define name spaces
-                use PHPMailer\PHPMailer;
-                use PHPMailer\SMTP;
-                use PHPMailer\Exception;
+                use PHPMailer\PHPMailer\PHPMailer;
+                use PHPMailer\PHPMailer\SMTP;
+                use PHPMailer\PHPMailer\Exception;
             //Create instance of PHPMailer
                 $mailer = new PHPMailer();
             //Set mailer to use smtp
