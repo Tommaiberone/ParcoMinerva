@@ -96,6 +96,10 @@
                                     <span class="range-value" id="range-value4"> 0 </span>
                                 </div>
                             </div>
+
+                            <div class="biglietto" id="data-biglietto" style="display: none"> Scegli la data per i biglietti base:
+                                <div><input type="date" name="data" style="margin-top: 10px"></div>
+                            </div>
                             
                             <br><h3 class="totale">
                                 Totale = 

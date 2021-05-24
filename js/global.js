@@ -29,7 +29,13 @@ window.onscroll = function() {
 // Aggiorna il costo totale dei biglietti scelti
 function update(val, num) {
     
-    $('#range-value' + num).text(val)
+    // Fa comparire la data per i biglietti base
+    if(num==1 && val!=0)
+        $('#data-biglietto').css("display", "inline");
+    else if(num==1 && val==0)
+        $('#data-biglietto').css("display", "none");
+
+    $('#range-value' + num).text(val);
 
     var total = parseInt($('#range-value1').text())*10;
     total += parseInt($('#range-value2').text())*12;
@@ -37,6 +43,8 @@ function update(val, num) {
     total += parseInt($('#range-value4').text())*100;
 
     $('#importo-totale').text(total);
+
+    
 }
 
 // Verifica che si sia comprato almeno un biglietto e rimanda alla schermata di ringraziamento
