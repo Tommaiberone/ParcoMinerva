@@ -2,9 +2,7 @@
 /* Background styles */
 body {
     background-image: url(../images/background.jpg);
-    background-repeat: no-repeat;
     background-size: cover;
-    /* background-size: 1920px 2160px; */
 }
 
 
@@ -56,14 +54,14 @@ a.nav-link:hover, a.nav-link.active {
 
 /* Whole page wrapper*/
 #Wrapper {
-    min-height: 10%;
+    min-height: 100%;
     width: 100%;
-    position: relative;
+    position: absolute;
 }
 
 /* Bottom bar styles */ 
 #bottom_bar {
-    position: relative;
+    position: absolute;
     bottom: 0%;
     width: 100%;
     display: inline-flex;

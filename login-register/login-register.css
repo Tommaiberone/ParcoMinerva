@@ -166,7 +166,7 @@ form {
 
     #login-container {
         font-size: 3vw;
-        width: 30px;
+        width: 60vw;
     }
 
     #register-container {
@@ -196,6 +196,14 @@ form {
 
     button > h4 {
         font-size: 1.5vh;
+    }
+
+    #submit > button, .form-group #registrati  {
+        width: 20vw;
+    }
+
+    .corta {
+        width: 100%;
     }
 
 }

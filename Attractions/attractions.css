@@ -7,30 +7,31 @@ h3 {
     display: grid;
     grid-template-columns: auto auto;
     padding: 0px 20px 20px 20px;
-    column-gap: 20px;
+    column-gap: 60px;
     row-gap: 30px;
 }
 
 .container {
 
     position: relative;
-    width: 700px; 
-    margin: 50px 50px 20px 0px;
-    height: 500px;
+    width: 100%; 
+    margin: 7vh 50px 2vh 0vh;
+    height: 50vh;
 } 
 
 .image {
     position: relative;
     transition: .5s ease;
     backface-visibility: hidden;
-    height: 500px;
-    margin-top: -665px;
+    height: 50vh;
+    /* margin-top: -665px; */
+    margin-top: -69vh;
     width: 100%;
     border: solid #007bff 2px;
 }
 
 .gif {
-    height: 500px;
+    height: 50vh;
     width: 100%;
     transition: .5s ease;
     opacity: 0;
@@ -51,9 +52,9 @@ h3 {
     transition: .5s ease;
     opacity: 0;
     position:  relative;
-    /*font-family: 'Freckle Face', cursive;*/
+    /* font-family: 'Freckle Face', cursive; */
     color: rgb(0, 0, 0);
-    font-size: 46px;
+    font-size: 50px;
     font-weight: bold;
 
 }
@@ -67,6 +68,7 @@ h3 {
 
 .scopri {
     margin-top: 60px;
+    min-width: 300px !important;
 }
 
 #scopri1{
@@ -98,4 +100,28 @@ h3 {
     width: 40px;
     margin-left: 20px;
     right: 20px;
+}
+
+/* Smartphone view */
+@media only screen and (max-width: 1024px) {
+
+    .tabella {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0px 20px 20px 20px;
+        row-gap: 30px;
+    }
+
+    .scopri {
+        margin-left: 25vw;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    .text {
+        font-size: 35px;
+    }
+
 }

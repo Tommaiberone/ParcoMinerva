@@ -9,7 +9,7 @@
 
 .carousel-inner{
 	position:relative;
-    height: 750px;
+    height: 80vh;
     width: 100%;
     border-radius: 40px;
     background-color: black;
@@ -82,9 +82,6 @@
 #DiscoverButton {
     margin-left: 35%;
     margin-right: 0%;
-    font-size: 16px;
-    font-weight: 700px !important;
-
 }
 
 .bottone {
@@ -113,5 +110,41 @@
     }
   }
 
+/* Smartphone view */
+@media only screen and (max-width: 1024px) {
 
+    .carousel, .carousel-inner{
+        height: 50vh;
+    }
+
+    .offerte {
+        grid-template-columns: auto;
+    }
+
+    .card {
+        width: 50px;
+    }
+
+    #DiscoverButton {
+        margin-left: 25%;
+        margin-top: 20px;
+        width: 50%;
+    }
+
+    #DiscoverButton >h3 {
+        font-size: 4vh;
+    }
+
+    .carousel-caption {
+        max-height: 15vh;
+    }
+    .carousel-caption > h5{
+        display: none;
+    }
+
+    #scroll {
+        margin-top: 20px;
+    }
+
+}
 
