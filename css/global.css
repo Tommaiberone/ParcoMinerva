@@ -2,7 +2,8 @@
 /* Background styles */
 body {
     background-image: url(../images/background.jpg);
-    background-size: cover;
+    background-size: 120%;
+    /* background-; */
 }
 
 
@@ -34,8 +35,6 @@ body {
     font-size: 16px;
 }
 
-
-
 a.nav-link:hover, a.nav-link.active {
     color: #0275d8 !important;
 }
@@ -66,11 +65,6 @@ a.nav-link:hover, a.nav-link.active {
     width: 100%;
     display: inline-flex;
 }
-
-
-
-
-
 
 /* Smartphone view */
 @media only screen and (max-width: 1024px) {

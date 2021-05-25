@@ -37,7 +37,7 @@
 
 /* Offerte styles */
 .offerte {
-    margin-left: 15%;
+    /* margin-left: 15%; */
     margin-right: 15%;
     width: 100%;
     display: grid;
@@ -70,6 +70,8 @@
     display: inline-flex;
     border: 3px solid #0275d8 !important;
     border-radius: 30px;
+    width: 15vw;
+    
     margin: 30px;
     background-color: rgba(255, 255, 255, 0.411);
 
@@ -123,8 +125,9 @@
     }
 
     .card {
-        width: 50px;
+        width: 50vw;
     }
+    
 
     #DiscoverButton {
         margin-left: 25%;
