@@ -73,7 +73,7 @@
                         $result = pg_query_params($dbconn, $q3, 
                                 array($email, $username, $password));
                         if ($result){
-                            header("Location: benvenuto.php?name=$email");
+                            header("Location: benvenuto.php?name=$username&email=$email");
                         }
                     }
                 }
