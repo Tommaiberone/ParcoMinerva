@@ -46,7 +46,7 @@ li > h3, li > p {
 #base, #basex, #VIP{
     position:relative;
     width: 25%;
-    height: 40%;
+    height:30%;
     margin-top: 3%;
 }
 
@@ -244,5 +244,9 @@ li > h3, li > p {
 
     .card-body{
         height: 30%;
+    }
+
+    #body1, #body2{
+        height: 30% !important;
     }
 }
