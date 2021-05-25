@@ -46,7 +46,7 @@ li > h3, li > p {
 #base, #basex, #VIP{
     position:relative;
     width: 25%;
-    height: 40%;
+    height:30%;
     margin-top: 3%;
 }
 
@@ -145,26 +145,29 @@ li > h3, li > p {
 }
 
 .card-body{
-    height: 40%;
+    height: 30%;
 }
 
-.card .not-last, .card .last {
+#body1, #body2{
+    height: 20% !important;
+}
+/*.card .not-last, .card .last {
     height: 100%;
 }
 
 .card .not-last > li {
-    height: 14%;
+    height: 15%;
 }
 
 .card .last > li {
     height: 10.3%;
-}
+} Si sovrappongono tutte le scritte con questa roba quando si passa in modalità smartphone */ 
 
 .card-img-top {
     transform: scale(0.98);
     position: relative;
     width: 100% !important;
-    height: 28% !important;
+    height: 40% !important;
     margin: auto;
     border-radius: 10px;
 }
@@ -237,5 +240,13 @@ li > h3, li > p {
 
     #div2 {
         display:none;
+    }
+
+    .card-body{
+        height: 30%;
+    }
+
+    #body1, #body2{
+        height: 30% !important;
     }
 }
