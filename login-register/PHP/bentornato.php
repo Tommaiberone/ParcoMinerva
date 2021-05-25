@@ -18,14 +18,15 @@
         
         <?php 
             // verifica che sia stato passato un nome alla pagina bentornato.php, altrimenti reindirizza a login.html
-            if (!(isset($_GET['email'])))
+            if (!((isset($_GET['name']))&&(isset($_GET['email']))))
                 header("Location: ../login.html");
         ?>
 
         <div class = "container-messages container border border-primary border-2 text-center">
             <?php 
+                $name = $_GET['name'];
                 $email = $_GET['email'];
-                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$email</i></h2>";
+                echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$name</i></h2>";
                 echo    "<script language = 'javascript' type = 'text/javascript'>
                             localStorage.setItem('email', '$email');
                         </script>"
@@ -54,80 +55,83 @@
 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 
-                <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
+                <form class="ticket-type" action="" method="post">
 
-                    <div class="modal-header">
-                        <h3 id="modal-title1" class="modal-title">Acquista i tuoi biglietti</h3>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
+                    <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
 
-                    <div class="modal-body text-center">
-
-                        <form class="ticket-type" action="" method="post">
-                            
-                            <div class="biglietto"> 10€ Biglietto Base l Divertimento assicurato!
-                                <div class="range-container">
-                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange1" 
-                                        onchange="update(this.value, 1);"> 
-                                    <span class="range-value" id="range-value1"> 0 </span>
-                                </div>
-                            </div>
-
-                            <div class="biglietto"> 12€ Biglietto Base+ l Senza limiti!
-                                <div class="range-container">
-                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange2" 
-                                        onchange="update(this.value, 2);"> 
-                                    <span class="range-value" id="range-value2"> 0 </span>
-                                </div>
-                            </div>
-
-                            <div class="biglietto"> 16€ Biglietto VIP l Nessun compromesso!
-                                <div class="range-container">
-                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange3" 
-                                        onchange="update(this.value, 3);"> 
-                                    <span class="range-value" id="range-value3"> 0 </span>
-                                </div>
-                            </div>
-
-                            <div class="biglietto"> 100€ Abbonamento annuale l Per gli affezionati
-                                <div class="range-container">
-                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange4" 
-                                            onchange="update(this.value, 4);"> 
-                                    <span class="range-value" id="range-value4"> 0 </span>
-                                </div>
-                            </div>
-
-                            <div class="biglietto" id="data-biglietto" style="display: none"> Scegli la data per i biglietti base:
-                                <div><input type="date" name="data" style="margin-top: 10px"></div>
-                            </div>
-                            
-                            <br><h3 class="totale">
-                                Totale = 
-                                <span id=importo-totale>0</span>
-                                €
-                            </h3>
-    
-                        </form>
-                    </div>
-
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary rounded-pill " data-bs-dismiss="modal">Indietro</button>
+                        <div class="modal-header">
+                            <h3 id="modal-title1" class="modal-title">Acquista i tuoi biglietti</h3>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
                         
-                        <!-- form per inviare email dell'utente a grazie.php -->
-                        <?php
-                            $email = $_GET['email'];
-                            //$nome = $_GET['nome'];
-                            echo    "<form action='./grazie.php?email=$email' method='POST' novalidate onsubmit='return verify();'>
-                                        <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
-                                    </form>"
-                        ?>
+                        <div class="modal-body text-center">
 
-                        <button class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
-                            Regala ad un amico!<span class="badge bg-secondary" style="margin-left: 5px;"> NEW</span>
-                        </button>
+                            <form class="ticket-type" action="" method="post">
+                                
+                                <div class="biglietto"> 10€ Biglietto Base l Divertimento assicurato!
+                                    <div class="range-container">
+                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange1" 
+                                            onchange="update(this.value, 1);"> 
+                                        <span class="range-value" id="range-value1"> 0 </span>
+                                    </div>
+                                </div>
+
+                                <div class="biglietto"> 12€ Biglietto Base+ l Senza limiti!
+                                    <div class="range-container">
+                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange2" 
+                                            onchange="update(this.value, 2);"> 
+                                        <span class="range-value" id="range-value2"> 0 </span>
+                                    </div>
+                                </div>
+
+                                <div class="biglietto"> 16€ Biglietto VIP l Nessun compromesso!
+                                    <div class="range-container">
+                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange3" 
+                                            onchange="update(this.value, 3);"> 
+                                        <span class="range-value" id="range-value3"> 0 </span>
+                                    </div>
+                                </div>
+
+                                <div class="biglietto"> 100€ Abbonamento annuale l Per gli affezionati
+                                    <div class="range-container">
+                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange4" 
+                                                onchange="update(this.value, 4);"> 
+                                        <span class="range-value" id="range-value4"> 0 </span>
+                                    </div>
+                                </div>
+
+                                <div class="biglietto" id="data-biglietto" style="display: none"> Scegli la data per i biglietti base:
+                                    <div><input type="date" name="data" style="margin-top: 10px"></div>
+                                </div>
+                                
+                                <br>
+                                <h3 class="totale">
+                                    Totale = 
+                                    <span id=importo-totale>0</span>
+                                    €
+                                </h3>
+        
+                            </form>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary rounded-pill " data-bs-dismiss="modal">Indietro</button>
+                            
+                            <!-- form per inviare email dell'utente a grazie.php -->
+                            <?php
+                                $email = $_GET['email'];
+                                $name = $_GET['name'];
+                                echo    "<form action='./grazie.php?email=$email&name=$name' method='POST' novalidate onsubmit='return verify();'>
+                                            <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
+                                        </form>"
+                            ?>
+
+                            <button class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
+                                Regala ad un amico!<span class="badge bg-secondary" style="margin-left: 5px;"> NEW</span>
+                            </button>
+                        </div>
+                        
                     </div>
-                    
-                </div>
             </div>
         </div>
 

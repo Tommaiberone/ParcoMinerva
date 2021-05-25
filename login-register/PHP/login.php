@@ -53,7 +53,7 @@
                     //se password corrisponde nel DB
                     else {
                         $nome = $line['username'];
-                        header("Location: bentornato.php?email=$email");
+                        header("Location: bentornato.php?name=$nome&email=$email");
                     }
                 }
             }
