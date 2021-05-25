@@ -54,8 +54,13 @@
                  aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-
-                <form class="ticket-type" action="" method="post">
+                
+                <!-- form per inviare email dell'utente a grazie.php -->
+                <?php
+                    $email = $_GET['email'];
+                    $name = $_GET['name'];
+                    echo "<form class='ticket-type' action='./grazie.php?email=$email&name=$name' method='post' novalidate onsubmit='return verify();'>"
+                ?>
 
                     <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
 
@@ -65,73 +70,61 @@
                         </div>
                         
                         <div class="modal-body text-center">
-
-                            <form class="ticket-type" action="" method="post">
                                 
-                                <div class="biglietto"> 10€ Biglietto Base l Divertimento assicurato!
-                                    <div class="range-container">
-                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange1" 
-                                            onchange="update(this.value, 1);"> 
-                                        <span class="range-value" id="range-value1"> 0 </span>
-                                    </div>
+                            <div class="biglietto"> 10€ Biglietto Base l Divertimento assicurato!
+                                <div class="range-container">
+                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange1" 
+                                        name= "biglietto_base" onchange="update(this.value, 1);"> 
+                                    <span class="range-value" id="range-value1"> 0 </span>
                                 </div>
+                            </div>
 
-                                <div class="biglietto"> 12€ Biglietto Base+ l Senza limiti!
-                                    <div class="range-container">
-                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange2" 
-                                            onchange="update(this.value, 2);"> 
-                                        <span class="range-value" id="range-value2"> 0 </span>
-                                    </div>
+                            <div class="biglietto"> 12€ Biglietto Base+ l Senza limiti!
+                                <div class="range-container">
+                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange2" 
+                                        name= "biglietto_base_plus" onchange="update(this.value, 2);"> 
+                                    <span class="range-value" id="range-value2"> 0 </span>
                                 </div>
+                            </div>
 
-                                <div class="biglietto"> 16€ Biglietto VIP l Nessun compromesso!
-                                    <div class="range-container">
-                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange3" 
-                                            onchange="update(this.value, 3);"> 
-                                        <span class="range-value" id="range-value3"> 0 </span>
-                                    </div>
+                            <div class="biglietto"> 16€ Biglietto VIP l Nessun compromesso!
+                                <div class="range-container">
+                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange3" 
+                                        name= "biglietto_VIP" onchange="update(this.value, 3);"> 
+                                    <span class="range-value" id="range-value3"> 0 </span>
                                 </div>
+                            </div>
 
-                                <div class="biglietto"> 100€ Abbonamento annuale l Per gli affezionati
-                                    <div class="range-container">
-                                        <input type="range" class="form-range" value="0" min="0" max="10" id="customRange4" 
-                                                onchange="update(this.value, 4);"> 
-                                        <span class="range-value" id="range-value4"> 0 </span>
-                                    </div>
+                            <div class="biglietto"> 100€ Abbonamento annuale l Per gli affezionati
+                                <div class="range-container">
+                                    <input type="range" class="form-range" value="0" min="0" max="10" id="customRange4" 
+                                            name= "abbonamento_annuale" onchange="update(this.value, 4);"> 
+                                    <span class="range-value" id="range-value4"> 0 </span>
                                 </div>
+                            </div>
 
-                                <div class="biglietto" id="data-biglietto" style="display: none"> Scegli la data per i biglietti base:
-                                    <div><input type="date" name="data" style="margin-top: 10px"></div>
-                                </div>
-                                
-                                <br>
-                                <h3 class="totale">
-                                    Totale = 
-                                    <span id=importo-totale>0</span>
-                                    €
-                                </h3>
+                            <div class="biglietto" id="data-biglietto" style="display: none"> Scegli la data per i biglietti base:
+                                <div><input type="date" name="data" style="margin-top: 10px"></div>
+                            </div>
+                            
+                            <br>
+                            <h3 class="totale">
+                                Totale = 
+                                <span id=importo-totale>0</span>
+                                €
+                            </h3>
         
-                            </form>
                         </div>
 
                         <div class="modal-footer">
                             <button class="btn btn-secondary rounded-pill " data-bs-dismiss="modal">Indietro</button>
-                            
-                            <!-- form per inviare email dell'utente a grazie.php -->
-                            <?php
-                                $email = $_GET['email'];
-                                $name = $_GET['name'];
-                                echo    "<form action='./grazie.php?email=$email&name=$name' method='POST' novalidate onsubmit='return verify();'>
-                                            <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
-                                        </form>"
-                            ?>
-
-                            <button class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
+                            <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
+                            <button type = 'submit' class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
                                 Regala ad un amico!<span class="badge bg-secondary" style="margin-left: 5px;"> NEW</span>
                             </button>
-                        </div>
-                        
+                        </div>                        
                     </div>
+                </form>
             </div>
         </div>
 
@@ -141,62 +134,55 @@
 
             <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
 
-                <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
+                <!-- form per inviare email dell'utente a grazie.php -->
+                <?php
+                    $name = $_GET['name'];
+                    echo "<form action='./grazie.php?name=$name' method='POST' id='intestatario' novalidate onsubmit='return validateFormIntestatario();'>"
+                ?>
 
-                    <div class="modal-header">
-                        <h3 class="modal-title">Ancora un attimo...</h3>
-                    </div>
+                    <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
 
-                    <div class="modal-body text-center">
+                        <div class="modal-header">
+                            <h3 class="modal-title">Ancora un attimo...</h3>
+                        </div>
 
-                        <h4 style="margin-bottom:20px;">A chi vuoi intestare i biglietti? </h4>
+                        <div class="modal-body text-center">
 
-                        <form action = "" id="intestatario" name = "intestatario" novalidate onsubmit="return validateFormIntestatario();">
+                            <h4 style="margin-bottom:20px;">A chi vuoi intestare i biglietti? </h4>
+
                             <div class="form-group">
                                 <!-- Email da passare al grazie.php, da scrivere nella mail da inviare all'amico --> 
-                                <input  type="text" id = "emailAmico" name = "inputEmail" class="form-control rounded rounded-2" 
+                                <input  type="text" id = "emailAmico" name = "emailIntestatario" class="form-control rounded rounded-2" 
                                         placeholder="Email alla quale manderemo i biglietti" required="required">
                             </div>  
                             <div class="form-group">
-                                <input  type="text" id = "nomeAmico" name = "inputNome" class="form-control rounded rounded-2"
+                                <input  type="text" id = "nomeAmico" name = "NomeIntestatario" class="form-control rounded rounded-2"
                                         placeholder="Nome dell'intestatario" required="required">
                             </div>  
                             <div class="form-group">
-                                <input  type="text" id = "CognomeAmico" name = "inputCognome" class="form-control rounded rounded-2"
+                                <input  type="text" id = "CognomeAmico" name = "CognomeIntestatario" class="form-control rounded rounded-2"
                                         placeholder="Cognome dell'intestatario" required="required">
                             </div>
-                        </form>
 
-                        <div class="form-group">
-                            <!-- Messaggio da passare al grazie.php, da scrivere nella mail da inviare all'amico -->
-                            <textarea id = "auguri" name = "messaggioAuguriAmico" class="form-control rounded rounded-2" form="intestatario"
-                                    placeholder="Inserisci un messaggio d'auguri!" rows="5"></textarea>
-                        </div>  
+                            <div class="form-group">
+                                <!-- Messaggio da passare al grazie.php, da scrivere nella mail da inviare all'amico -->
+                                <textarea id = "auguri" name = "messaggioAuguri" class="form-control rounded rounded-2" form="intestatario"
+                                        placeholder="Inserisci un messaggio d'auguri!" rows="5"></textarea>
+                            </div>  
 
+                        </div>
 
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" 
+                                data-bs-dismiss="modal">Indietro</button>
+                            
+                            <button type='submit' class='btn btn-primary rounded-pill' 
+                                    style='position: relative !important; width:100% !important;'>Regala ora!
+                            </button>
+
+                        </div>
                     </div>
-
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" 
-                            data-bs-dismiss="modal">Indietro</button>
-
-                        <!-- form per inviare email dell'utente a grazie.php -->
-                        <?php
-                            $email = $_GET['email'];
-                            $nome = $_GET['nome'];
-                            $auguri = $_GET['nome'];
-                            echo    "<form action='./grazie.php?email=$email&nome=$nome' method='POST' novalidate onsubmit='return verify();'>
-                                        <a style='position: relative !important; width:100% !important;'>
-                                            <button type='button' class='btn btn-primary rounded-pill' >Regala ora!</button>
-                                        </a>
-                                    </form>"
-                        ?>
-
-                        <a style="position: relative !important; width:100% !important;">
-                            <button type="button" class="btn btn-primary rounded-pill" >Regala ora!</button>
-                        </a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
 

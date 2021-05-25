@@ -23,16 +23,29 @@
 
         <?php
             //Include required PHPMailer files
-                require './Mailer/PHPMailer.php';
-                require './Mailer/SMTP.php';
-                require './Mailer/Exception.php';
+            require './Mailer/PHPMailer.php';
+            require './Mailer/SMTP.php';
+            require './Mailer/Exception.php';
 
             //Define name spaces
-                use PHPMailer\PHPMailer\PHPMailer;
-                use PHPMailer\PHPMailer\SMTP;
-                use PHPMailer\PHPMailer\Exception;
+            use PHPMailer\PHPMailer\PHPMailer;
+            use PHPMailer\PHPMailer\SMTP;
+            use PHPMailer\PHPMailer\Exception;
 
-            $email = $_GET['email'];
+            $name = $_GET['name'];
+            $biglietto_base = $_POST['biglietto_base'];
+            $biglietto_base_plus = $_POST['biglietto_base_plus'];
+            $biglietto_VIP = $_POST['biglietto_VIP'];
+            $abbonamento_annuale = $_POST['abbonamento_annuale'];
+            @$data = $_POST['data'];
+            @$intestatario = $_POST['NomeIntestatario'];
+            @$auguri = $_POST['messaggioAuguri'];
+
+            if(!isset($intestatario))
+                $email = $_GET['email'];
+            else
+                $email = $_POST['emailIntestatario'];
+
             //$nome = $_GET['nome']; Non funziona più la funzione per il check del localstorage poi
             //$auguri = $_GET['auguri'];
 
@@ -70,7 +83,22 @@
                 $mail->isHTML(true);
 
             //Email body
-                $mail->Body = "<h1>Ciao, " . $email . " </h1></br><p>Ecco a te i tuoi biglietti</p>";
+
+                if(isset($intestatario))
+                    $mail->Body = "<h1>Ciao, " . $intestatario . " </h1></br><p>" . $name . " ti ha regalato dei biglietti! </p> <p>" . $auguri . "</p>" . 
+                                  "<p>Buon divertimento!</p><br><br>"
+                                  . "<p>Biglietti base: " . $biglietto_base . " con data: " . $data
+                                  . "</p><p>Biglietti base +: " . $biglietto_base_plus
+                                  . "</p><p>Biglietti VIP: " . $biglietto_VIP
+                                  . "</p><p>Abbonamenti annuali: " . $abbonamento_annuale;
+
+                else
+                    $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti</p>" 
+                    . "<p>Biglietti base: " . $biglietto_base . " con data: " . $data
+                    . "</p><p>Biglietti base +: " . $biglietto_base_plus
+                    . "</p><p>Biglietti VIP: " . $biglietto_VIP
+                    . "</p><p>Abbonamenti annuali: " . $abbonamento_annuale;
+                    
 
             //Add recipient
                 $mail->addAddress("$email");

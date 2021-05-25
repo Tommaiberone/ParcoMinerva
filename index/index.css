@@ -132,7 +132,7 @@
     }
 
     #DiscoverButton >h3 {
-        font-size: 4vh;
+        font-size: 5vw;
     }
 
     .carousel-caption {
@@ -140,6 +140,10 @@
     }
     .carousel-caption > h5{
         display: none;
+    }
+    .carousel-caption > h3{
+        margin-top: 0px;
+        font-size: 3vw;
     }
 
     #scroll {
