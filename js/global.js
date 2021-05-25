@@ -28,12 +28,43 @@ window.onscroll = function() {
 
 // Aggiorna il costo totale dei biglietti scelti
 function update(val, num) {
+        
+    // Disattiva i pulsanti se la data inserita è precedente a quella odierna
+    if (num==5 && !CheckDate()) {
+        $('#acquista').removeAttr("enabled");
+        $('#amico').removeAttr("enabled");
+        $('#acquista').attr("disabled","disabled");
+        $('#amico').attr("disabled","disabled");
+    }
+    
+    // Riattiva i pulsanti se la data è stata inserita correttamente
+    if (num==5 && CheckDate()) {
+        $('#acquista').removeAttr("disabled");
+        $('#amico').removeAttr("disabled");
+        $('#acquista').attr("enabled","enabled");
+        $('#amico').attr("enabled","enabled");
+    }
     
     // Fa comparire la data per i biglietti base
-    if(num==1 && val!=0)
+    else if(num==1 && val!=0) {
         $('#data-biglietto').css("display", "inline");
-    else if(num==1 && val==0)
+
+        // Disattiva i pulsanti se la data non è inserita
+        if (!CheckDate()) {
+            $('#acquista').removeAttr("enabled");
+            $('#amico').removeAttr("enabled");
+            $('#acquista').attr("disabled","disabled");
+            $('#amico').attr("disabled","disabled");
+        }
+    }
+        
+    else if(num==1 && val==0) {
         $('#data-biglietto').css("display", "none");
+        $('#acquista').removeAttr("disabled");
+        $('#amico').removeAttr("disabled");
+        $('#acquista').attr("enabled","enabled");
+        $('#amico').attr("enabled","enabled");
+    }
 
     $('#range-value' + num).text(val);
 
@@ -43,8 +74,18 @@ function update(val, num) {
     total += parseInt($('#range-value4').text())*100;
 
     $('#importo-totale').text(total);
+}
 
+// Verifica che la data sia maggiore di quella odierna
+function CheckDate() {
+    var CurrentDate = new Date();
+    var UserDate = new Date($('#data').val());
     
+    if(UserDate > CurrentDate){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 // Verifica che si sia comprato almeno un biglietto e rimanda alla schermata di ringraziamento
@@ -53,9 +94,6 @@ function verify() {
         alert("Scegli almeno un biglietto da acquistare");
         return false;
     } return true;
-
-    
-    //else window.location.href = "../../index/grazie.html";
 }
 
 function Bump_on_click_global () {

@@ -104,7 +104,7 @@
                             </div>
 
                             <div class="biglietto" id="data-biglietto" style="display: none"> Scegli la data per i biglietti base:
-                                <div><input type="date" name="data" style="margin-top: 10px"></div>
+                                <div><input type="date" id="data" name="data" style="margin-top: 10px" onchange="update(0, 5);" value="2021-05-20" required></div>
                             </div>
                             
                             <br>
@@ -118,8 +118,8 @@
 
                         <div class="modal-footer">
                             <button class="btn btn-secondary rounded-pill " data-bs-dismiss="modal">Indietro</button>
-                            <button type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
-                            <button type = 'submit' class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
+                            <button enabled id="acquista" type = 'submit' class='btn btn-primary rounded-pill' name = 'compraBigliettiPrincipale'>Acquista ora!</button>
+                            <button enabled id="amico" class="btn btn-success rounded-pill" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop3" >
                                 Regala ad un amico!<span class="badge bg-secondary" style="margin-left: 5px;"> NEW</span>
                             </button>
                         </div>                        
