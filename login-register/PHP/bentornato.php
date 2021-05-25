@@ -18,8 +18,8 @@
         
         <?php 
             // verifica che sia stato passato un nome alla pagina bentornato.php, altrimenti reindirizza a login.html
-            if (!((isset($_GET['name']))&&(isset($_GET['email']))))
-                header("Location: ../login.html");
+            /*if (!((isset($_GET['name']))&&(isset($_GET['email']))))
+                header("Location: ../login.html");*/
         ?>
 
         <div class = "container-messages container border border-primary border-2 text-center">
@@ -29,6 +29,7 @@
                 echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$name</i></h2>";
                 echo    "<script language = 'javascript' type = 'text/javascript'>
                             localStorage.setItem('email', '$email');
+                            localStorage.setItem('name', '$name');
                         </script>"
             ?>
             <!-- Button trigger modal -->
