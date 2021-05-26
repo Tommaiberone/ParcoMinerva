@@ -26,11 +26,23 @@
             <?php 
                 $name = $_GET['name'];
                 $email = $_GET['email'];
+                @$ricordati = $_GET['ricordati'];
+                
                 echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$name</i></h2>";
-                echo    "<script language = 'javascript' type = 'text/javascript'>
-                            localStorage.setItem('email', '$email');
-                            localStorage.setItem('name', '$name'); 
-                        </script>" //inserisco sia email che name nel localStorage, altrimenti non funziona il check e va in loop
+
+                // inserisco email e nome nel localStorage se la checkbox è segnata
+                if($ricordati == 'on')
+                    echo    "<script language = 'javascript' type = 'text/javascript'>
+                                localStorage.setItem('email', '$email');
+                                localStorage.setItem('name', '$name'); 
+                            </script>";
+                
+                // Altrimenti la inserisco nel sessionStorage
+                else
+                    echo    "<script language = 'javascript' type = 'text/javascript'>
+                                sessionStorage.setItem('email', '$email');
+                                sessionStorage.setItem('name', '$name'); 
+                            </script>";
             ?>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-block rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
@@ -60,6 +72,7 @@
                 <?php
                     $email = $_GET['email'];
                     $name = $_GET['name'];
+                    $ricordati = $_GET['ricordati'];
                     echo "<form id = 'acquistoForm' class='ticket-type' action='./grazie.php?email=$email&name=$name' method='POST' novalidate onsubmit='return verify();'>"
                 ?>
 

@@ -29,6 +29,7 @@
             //se loginButton è stato premuto, verifica che esistano le entry nel DB
             else {
                 $email = $_POST['inputEmail'];
+                $ricordati = $_POST['ricordati'];
                 $q1 = "select * from utente where email = $1";
                 $result = pg_query_params($dbconn, $q1, array($email));
                 
@@ -53,7 +54,7 @@
                     //se password corrisponde nel DB
                     else {
                         $nome = $line['username'];
-                        header("Location: bentornato.php?name=$nome&email=$email");
+                        header("Location: bentornato.php?name=$nome&email=$email&ricordati=$ricordati");
                     }
                 }
             }

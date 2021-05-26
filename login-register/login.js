@@ -49,15 +49,18 @@ function validatePassword(pass) {
 // validazione del remember me
 //N.B: se "ricordati di me" è checkato, lo username viene salvato nel localStorage, e verrà ricordato anche se il browser sarà chiuso
 //     se "ricordati di me" NON è checkato, lo username viene salvato nel sessionStorage, e verrà dimenticato alla chiusura del browser 
-/*function rememberMeCheck(checkbox, email){
+function rememberMeCheck(checkbox, email){
     if (checkbox) localStorage.setItem("email", email);
     else sessionStorage.setItem("email", email);
-}*/
+}
 
 
 // verifica che l'utente sia già loggato: se loggato reindirizza alla schermata di acquisto dei biglietti
 function checkStorage() {
-    if (localStorage.getItem("email") && localStorage.getItem("name")) window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("name") + '&email=' + localStorage.getItem("email");
+    if (localStorage.getItem("email") && localStorage.getItem("name")) 
+        window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("name") + '&email=' + localStorage.getItem("email");
+    else if (sessionStorage.getItem("email") && sessionStorage.getItem("name")) 
+        window.location.href = './PHP/bentornato.php?name=' + sessionStorage.getItem("name") + '&email=' + sessionStorage.getItem("email");
 }
 
 
@@ -72,7 +75,11 @@ $("#regalaBTN").click(function(event) {
     var toSubmit = acquistoForm + "&" + intestatario;
     console.log(toSubmit);
 
-    var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
+    if (localStorage.getItem('name'))
+        var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
+    else if (sessionStorage.getItem('name'))
+        var postCheck = $.post('grazie.php?name=' + sessionStorage.getItem('name'), toSubmit)
+
     if (postCheck.done){
         console.log("Tutto ok");
         alert("Hai regalato i biglietti con successo, il tuo amico riceverà una mail a breve. Stai per essere reindirizzato alla pagina in cui eri prima :)");
