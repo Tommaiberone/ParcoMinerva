@@ -60,3 +60,23 @@ function checkStorage() {
     if (localStorage.getItem("email") && localStorage.getItem("name")) window.location.href = './PHP/bentornato.php?name=' + localStorage.getItem("name") + '&email=' + localStorage.getItem("email");
 }
 
+
+$("#regalaBTN").click(function(event) {
+
+    var acquistoForm = $('#acquistoForm').serialize();
+    console.log(acquistoForm);
+    
+    var intestatario = $("#intestatario").serialize();
+    console.log(intestatario);
+
+    var toSubmit = acquistoForm + "&" + intestatario;
+    console.log(toSubmit);
+
+    var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
+    if (postCheck.done){
+        console.log("Tutto ok");
+
+    }
+});
+
+

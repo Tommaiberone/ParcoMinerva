@@ -60,7 +60,7 @@
                 <?php
                     $email = $_GET['email'];
                     $name = $_GET['name'];
-                    echo "<form class='ticket-type' action='./grazie.php?email=$email&name=$name' method='post' novalidate onsubmit='return verify();'>"
+                    echo "<form id = 'acquistoForm' class='ticket-type' action='./grazie.php?email=$email&name=$name' method='POST' novalidate onsubmit='return verify();'>"
                 ?>
 
                     <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
@@ -138,7 +138,7 @@
                 <!-- form per inviare email dell'utente a grazie.php -->
                 <?php
                     $name = $_GET['name'];
-                    echo "<form action='./grazie.php?name=$name' method='POST' id='intestatario' novalidate onsubmit='return validateFormIntestatario();'>"
+                    echo "<form  action='' method='POST' id='intestatario' novalidate onsubmit='return validateFormIntestatario();'>"
                 ?>
 
                     <div class="modal-content rounded border border-primary border-3" style="border-radius: 35px !important;">
@@ -177,7 +177,7 @@
                             <button class="btn btn-secondary rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" 
                                 data-bs-dismiss="modal">Indietro</button>
                             
-                            <button type='submit' class='btn btn-primary rounded-pill' 
+                            <button id = "regalaBTN" class='btn btn-primary rounded-pill' type = 'submit' 
                                     style='position: relative !important; width:100% !important;'>Regala ora!
                             </button>
 
@@ -191,6 +191,7 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src = "../../js/global.js" async></script>
         <script src = "../login.js"></script>
+        <script src = "../register.js"></script>
 
         <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
         <script src = "../../js/bootstrap.bundle.js"></script>

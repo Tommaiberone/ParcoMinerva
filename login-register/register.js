@@ -22,9 +22,9 @@ function validateForm(event) {
 
 function validateFormIntestatario(event) {
 
-    var email = $("#email").val();
-    var nome = $("#nome").val();
-    var cognome = $("#cognome").val();
+    var email = $("#emailAmico").val();
+    var nome = $("#nomeAmico").val();
+    var cognome = $("#CognomeAmico").val();
     
     if (! validateNome(nome)) return false; 
     
