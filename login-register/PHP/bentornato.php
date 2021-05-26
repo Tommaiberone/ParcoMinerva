@@ -17,9 +17,9 @@
 
         
         <?php 
-            // verifica che sia stato passato un nome e una mail alla pagina bentornato.php, altrimenti reindirizza a login.html
-            if (!((isset($_GET['name']))&&(isset($_GET['email'])))) //bentornato.php?name=xxx&email=yyy
-                header("Location: ../login.html"); 
+            // verifica che sia stato passato un nome alla pagina bentornato.php, altrimenti reindirizza a login.html
+            /*if (!((isset($_GET['name']))&&(isset($_GET['email']))))
+                header("Location: ../login.html");*/
         ?>
 
         <div class = "container-messages container border border-primary border-2 text-center">
@@ -29,8 +29,8 @@
                 echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$name</i></h2>";
                 echo    "<script language = 'javascript' type = 'text/javascript'>
                             localStorage.setItem('email', '$email');
-                            localStorage.setItem('name', '$name'); 
-                        </script>" //inserisco sia email che name nel localStorage, altrimenti non funziona il check e va in loop
+                            localStorage.setItem('name', '$name');
+                        </script>"
             ?>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary btn-block rounded-pill" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"
