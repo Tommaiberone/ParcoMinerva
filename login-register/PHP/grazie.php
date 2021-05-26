@@ -82,67 +82,72 @@
 
             //Email body
 
-                // Genero i codici dei biglietti
-                $biglietto_base_codici = array();
-                $biglietto_base_plus_codici = array();
-                $biglietto_VIP_codici = array();
-                $abbonamento_annuale_codici = array();
+            // Genero i codici dei biglietti
+            $biglietto_base_codici = array();
+            $biglietto_base_plus_codici = array();
+            $biglietto_VIP_codici = array();
+            $abbonamento_annuale_codici = array();
 
-                for ($i=0; $i<$biglietto_base; $i++) {
-                    array_push($biglietto_base_codici, substr(md5 (rand ()), 0, 7));
-                }
-                for ($i=0; $i<$biglietto_base_plus; $i++) {
-                    array_push($biglietto_base_plus_codici, substr(md5 (rand ()), 0, 7));
-                }
-                for ($i=0; $i<$biglietto_VIP; $i++) {
-                    array_push($biglietto_VIP_codici, substr(md5 (rand ()), 0, 7));
-                }
-                for ($i=0; $i<$abbonamento_annuale; $i++) {
-                    array_push($abbonamento_annuale_codici, substr(md5 (rand ()), 0, 7));
-                }
+            for ($i=0; $i<$biglietto_base; $i++) {
+                array_push($biglietto_base_codici, substr(md5 (rand ()), 0, 7));
+            }
+            for ($i=0; $i<$biglietto_base_plus; $i++) {
+                array_push($biglietto_base_plus_codici, substr(md5 (rand ()), 0, 7));
+            }
+            for ($i=0; $i<$biglietto_VIP; $i++) {
+                array_push($biglietto_VIP_codici, substr(md5 (rand ()), 0, 7));
+            }
+            for ($i=0; $i<$abbonamento_annuale; $i++) {
+                array_push($abbonamento_annuale_codici, substr(md5 (rand ()), 0, 7));
+            }
+
+            if ($biglietto_base == 0)
+                $data="Nessuna";
 
 
-                if(isset($intestatario))
-                    $mail->Body = "<h1>Ciao, " . $intestatario . " </h1></br><p>" . $name . " ti ha regalato dei biglietti! </p> <p>" . $auguri . "</p>" . 
-                                  "<p>Buon divertimento!</p><br><br>"
-                                  
-                                  . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
-                                  . "</p><p> Codici: " . implode(" ",$biglietto_base_codici)
-              
-                                  . "</p><br><p>Biglietti base +: " . $biglietto_base_plus
-                                  . "</p><p> Codici: " . implode(" ",$biglietto_base_plus_codici)
-              
-                                  . "</p><br><p>Biglietti VIP: " . $biglietto_VIP
-                                  . "</p><p> Codici: " . implode(" ",$biglietto_VIP_codici)
-              
-                                  . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
-                                  . "</p><p> Codici: " . implode(" ",$abbonamento_annuale_codici);
+            if(isset($intestatario))
+                $mail->Body = "<h1>Ciao, " . $intestatario . " </h1></br><p>" . $name . " ti ha regalato dei biglietti! </p> <p>" . $auguri . "</p>" . 
+                                "<p>Buon divertimento!</p><br><br>"
+                                
+                                . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
+                                . "</p><p> Codici: " . implode("   ",$biglietto_base_codici)
+            
+                                . "</p><br><p>Biglietti base +: " . $biglietto_base_plus
+                                . "</p><p> Codici: " . implode("   ",$biglietto_base_plus_codici)
+            
+                                . "</p><br><p>Biglietti VIP: " . $biglietto_VIP
+                                . "</p><p> Codici: " . implode("   ",$biglietto_VIP_codici)
+            
+                                . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
+                                . "</p><p> Codici: " . implode("   ",$abbonamento_annuale_codici);
 
-                else
-                    $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti: </p>" 
+            else
+                $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti: </p>" 
 
-                    . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
-                    . "</p><p> Codici: " . implode(" ",$biglietto_base_codici)
+                . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
+                . "</p><p> Codici: " . implode("   ",$biglietto_base_codici)
 
-                    . "</p><br><p>Biglietti base +: " . $biglietto_base_plus
-                    . "</p><p> Codici: " . implode(" ",$biglietto_base_plus_codici)
+                . "</p><br><p>Biglietti base +: " . $biglietto_base_plus
+                . "</p><p> Codici: " . implode("   ",$biglietto_base_plus_codici)
 
-                    . "</p><br><p>Biglietti VIP: " . $biglietto_VIP
-                    . "</p><p> Codici: " . implode(" ",$biglietto_VIP_codici)
+                . "</p><br><p>Biglietti VIP: " . $biglietto_VIP
+                . "</p><p> Codici: " . implode("   ",$biglietto_VIP_codici)
 
-                    . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
-                    . "</p><p> Codici: " . implode(" ",$abbonamento_annuale_codici);
+                . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
+                . "</p><p> Codici: " . implode("   ",$abbonamento_annuale_codici);
+
+            //Add gif in email 
+            $mail->AddEmbeddedImage('Mail_gif.gif', 'gif', 'Mail_gif.gif');
                     
-
             //Add recipient
-                $mail->addAddress("$email");
+            $mail->addAddress("$email");
 
             //Finally send email
-                if ( !($mail->send()) )
-                    echo "Message could not be sent. Mailer Error: "($mail->ErrorInfo);
+            if ( !($mail->send()) )
+                echo "Message could not be sent. Mailer Error: "($mail->ErrorInfo);
 
             //Closing smtp connection
-                $mail->smtpClose();
+            $mail->smtpClose();
 
         ?>
 
