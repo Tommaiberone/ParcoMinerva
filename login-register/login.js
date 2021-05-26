@@ -75,7 +75,8 @@ $("#regalaBTN").click(function(event) {
     var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
     if (postCheck.done){
         console.log("Tutto ok");
-
+        alert("Hai regalato i biglietti con successo, il tuo amico riceverà una mail a breve. Stai per essere reindirizzato alla pagina in cui eri prima :)");
+        window.location.href = "../biglietti/biglietti.html";
     }
 });
 

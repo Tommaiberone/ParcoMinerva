@@ -110,31 +110,31 @@
                                 "<p>Buon divertimento!</p><br><br>"
                                 
                                 . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
-                                . "</p><p> Codici: " . implode("   ",$biglietto_base_codici)
+                                . "</p><p> Codici: " . implode(" - ",$biglietto_base_codici)
             
                                 . "</p><br><p>Biglietti base +: " . $biglietto_base_plus
-                                . "</p><p> Codici: " . implode("   ",$biglietto_base_plus_codici)
+                                . "</p><p> Codici: " . implode(" - ",$biglietto_base_plus_codici)
             
                                 . "</p><br><p>Biglietti VIP: " . $biglietto_VIP
-                                . "</p><p> Codici: " . implode("   ",$biglietto_VIP_codici)
+                                . "</p><p> Codici: " . implode(" - ",$biglietto_VIP_codici)
             
                                 . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
-                                . "</p><p> Codici: " . implode("   ",$abbonamento_annuale_codici);
+                                . "</p><p> Codici: " . implode(" - ",$abbonamento_annuale_codici);
 
             else
                 $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti: </p>" 
 
                 . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
-                . "</p><p> Codici: " . implode("   ",$biglietto_base_codici)
+                . "</p><p> Codici: " . implode(" - ",$biglietto_base_codici)
 
                 . "</p><br><p>Biglietti base +: " . $biglietto_base_plus
-                . "</p><p> Codici: " . implode("   ",$biglietto_base_plus_codici)
+                . "</p><p> Codici: " . implode(" - ",$biglietto_base_plus_codici)
 
                 . "</p><br><p>Biglietti VIP: " . $biglietto_VIP
-                . "</p><p> Codici: " . implode("   ",$biglietto_VIP_codici)
+                . "</p><p> Codici: " . implode(" - ",$biglietto_VIP_codici)
 
                 . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
-                . "</p><p> Codici: " . implode("   ",$abbonamento_annuale_codici);
+                . "</p><p> Codici: " . implode(" - ",$abbonamento_annuale_codici);
 
             //Add gif in email 
             $mail->AddEmbeddedImage('Mail_gif.gif', 'gif', 'Mail_gif.gif');
