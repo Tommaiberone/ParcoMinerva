@@ -106,8 +106,7 @@
 
 
             if(isset($intestatario))
-                $mail->Body = "<h1>Ciao, " . $intestatario . " </h1></br><p>" . $name . " ti ha regalato dei biglietti! </p> <p>" . $auguri . "</p>" . 
-                                "<p>Buon divertimento!</p><br><br>"
+                $mail->Body = "<h1>Ciao, " . $intestatario . " </h1></br><p>" . $name . " ti ha regalato dei biglietti! </p> <p>" . $auguri . "</p>" 
                                 
                                 . "<p><br>Biglietti base: " . $biglietto_base . ", con data: " . $data 
                                 . "</p><p> Codici: " . implode(" - ",$biglietto_base_codici)
@@ -119,7 +118,11 @@
                                 . "</p><p> Codici: " . implode(" - ",$biglietto_VIP_codici)
             
                                 . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
-                                . "</p><p> Codici: " . implode(" - ",$abbonamento_annuale_codici);
+                                . "</p><p> Codici: " . implode(" - ",$abbonamento_annuale_codici)
+                                
+                                . "</p><p> Ecco a te un codice per riscattare alle casse eventuali promozioni: " .  substr(md5 (rand ()), 0, 10)
+
+                                . "</p><p> Vi aspettiamo e vi auguriamo un buon divertimento nel parco della Minerva!";
 
             else
                 $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti: </p>" 
@@ -134,7 +137,11 @@
                 . "</p><p> Codici: " . implode(" - ",$biglietto_VIP_codici)
 
                 . "</p><br><p>Abbonamenti annuali: " . $abbonamento_annuale
-                . "</p><p> Codici: " . implode(" - ",$abbonamento_annuale_codici);
+                . "</p><p> Codici: " . implode(" - ",$abbonamento_annuale_codici)
+                
+                . "</p><p> Ecco a te un codice per riscattare alle casse eventuali promozioni: " . substr(md5 (rand ()), 0, 10)
+                
+                . "</p><p> Vi aspettiamo e vi auguriamo un buon divertimento nel parco della Minerva!";
 
             //Add gif in email 
             $mail->AddEmbeddedImage('Mail_gif.gif', 'gif', 'Mail_gif.gif');
