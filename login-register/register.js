@@ -156,7 +156,11 @@ $("#regalaBTN").click(function(event) {
     var toSubmit = acquistoForm + "&" + intestatario;
     console.log(toSubmit);
 
-    var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
+    if (localStorage.getItem('name'))
+        var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
+    else if (sessionStorage.getItem('name'))
+        var postCheck = $.post('grazie.php?name=' + sessionStorage.getItem('name'), toSubmit)
+
     if (postCheck.done){
         console.log("Tutto ok");
         alert("Hai regalato i biglietti con successo, il tuo amico riceverà una mail a breve. Stai per essere reindirizzato alla pagina in cui eri prima :)");
