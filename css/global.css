@@ -27,7 +27,6 @@ body {
 }
 #acquista {
     display:none;
-    margin-right: .7vh;
 }
 
 /* Navbar styles */
@@ -80,6 +79,12 @@ a.nav-link:hover, a.nav-link.active {
     
     #signup, #login, #acquista {
         margin-top: 1%;
+
+    }
+
+    #acquista {
+        margin-right: .7vh;
+
     }
     
 }
