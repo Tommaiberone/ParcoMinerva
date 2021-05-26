@@ -82,6 +82,11 @@ var contatti = ''+
     '                    <li class = "nav-item">'+
     '                        <a id = "logout" type = "button" class = "btn btn-danger rounded" onclick ="logout();"> <b> Logout </b> </a>'+
     '                    </li>'+
+    ''+                    
+    '                    <li class = "nav-item">'+
+    '                        <a id = "acquista" type = "button" class = "btn btn-primary rounded" href = "../login-register/PHP/bentornato.php"> <b> Acquista </b> </a>'+
+    '                    </li>'+
+    ''+
     '                </ul>'+
     '              </div>'+
     '            </nav>'+

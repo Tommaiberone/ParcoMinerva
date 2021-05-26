@@ -70,6 +70,7 @@ function login_signup_hide1 () {
         $("#login").css("display","none");
         $("#signup").css("display","none");
         $("#logout").css("display","inline");
+        $("#acquista").css("display","inline");
         $("#compra").html(" <u> Clicca qui sotto per comprare il tuo biglietto! </u> ");
         $("#accediBTN").html("<b> Compra </b>");
     }

@@ -113,6 +113,7 @@ function login_signup_hide (){
         $("#login").css("display","none");
         $("#signup").css("display","none");
         $("#logout").css("display","inline");
+        $("#acquista").css("display","inline");
     }
     /*else {
         $("#login").css("display","inline");
