@@ -160,12 +160,17 @@ li > h3, li > p {
 .list-group-item, .list-group{
     background-color: rgba(255, 255, 255, 0.1) !important;
 }
+
+.four-elem-group .list-group-item{
+    height: 100%;
+}
+
 .list-group {
     display: table;
-    height: 20vh !important;
 }
 
 .list-group-item{
+    height: 100%;
     display: flex;
     align-items: center;
     text-align: left;
@@ -181,11 +186,9 @@ li > h3, li > p {
     margin-left: 10%;
     display: flex;
 }
-#large-card .list-group{
-    height: 12vh !important;
-}
 
 #large-card .list-group-item{
+    height: 80px;
     display: table-cell; 
     vertical-align: middle !important; 
 }
@@ -222,6 +225,9 @@ li > h3, li > p {
         height: 20%;
     }
 
+    #body1, #body2 {
+        height: 20% !important;
+    }
     #basex, #base, #VIP{
         height: 15vh;
     }
