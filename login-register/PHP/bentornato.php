@@ -72,7 +72,7 @@
                 <?php
                     $email = $_GET['email'];
                     $name = $_GET['name'];
-                    $ricordati = $_GET['ricordati'];
+                    @$ricordati = $_GET['ricordati'];
                     echo "<form id = 'acquistoForm' class='ticket-type' action='./grazie.php?email=$email&name=$name' method='POST' novalidate onsubmit='return verify();'>"
                 ?>
 

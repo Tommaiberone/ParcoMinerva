@@ -29,7 +29,7 @@
             //se loginButton è stato premuto, verifica che esistano le entry nel DB
             else {
                 $email = $_POST['inputEmail'];
-                $ricordati = $_POST['ricordati'];
+                @$ricordati = $_POST['ricordati'];
                 $q1 = "select * from utente where email = $1";
                 $result = pg_query_params($dbconn, $q1, array($email));
                 
