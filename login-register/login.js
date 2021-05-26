@@ -61,23 +61,6 @@ function checkStorage() {
 }
 
 
-$("#regalaBTN").click(function(event) {
 
-    var acquistoForm = $('#acquistoForm').serialize();
-    console.log(acquistoForm);
-    
-    var intestatario = $("#intestatario").serialize();
-    console.log(intestatario);
-
-    var toSubmit = acquistoForm + "&" + intestatario;
-    console.log(toSubmit);
-
-    var postCheck = $.post('grazie.php?name=' + localStorage.getItem('name'), toSubmit)
-    if (postCheck.done){
-        console.log("Tutto ok");
-        alert("Hai regalato i biglietti con successo, il tuo amico riceverà una mail a breve. Stai per essere reindirizzato alla pagina in cui eri prima :)");
-        window.location.href = "../biglietti/biglietti.html";
-    }
-});
 
 
