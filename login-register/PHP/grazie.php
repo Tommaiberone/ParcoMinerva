@@ -46,8 +46,6 @@
             else
                 $email = $_POST['emailIntestatario'];
 
-            //$nome = $_GET['nome']; Non funziona più la funzione per il check del localstorage poi
-            //$auguri = $_GET['auguri'];
 
             //Create instance of PHPMailer
                 $mail = new PHPMailer();
@@ -93,8 +91,8 @@
                                   . "</p><p>Abbonamenti annuali: " . $abbonamento_annuale;
 
                 else
-                    $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti</p>" 
-                    . "<p>Biglietti base: " . $biglietto_base . " con data: " . $data
+                    $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti: </p>" 
+                    . "<p>Biglietti base: " . $biglietto_base . ", -- con data: " . $data
                     . "</p><p>Biglietti base +: " . $biglietto_base_plus
                     . "</p><p>Biglietti VIP: " . $biglietto_VIP
                     . "</p><p>Abbonamenti annuali: " . $abbonamento_annuale;
