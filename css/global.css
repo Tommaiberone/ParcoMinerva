@@ -77,12 +77,12 @@ a.nav-link:hover, a.nav-link.active {
         margin-left: 2%;
     }
     
-    #signup, #login, #acquista {
+    #signup, #login, #acquista_top {
         margin-top: 1%;
 
     }
 
-    #acquista{
+    #acquista_top{
         margin-right: .7vh;
 
     }

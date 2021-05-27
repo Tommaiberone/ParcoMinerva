@@ -33,18 +33,18 @@
             use PHPMailer\PHPMailer\Exception;
 
             $name = $_GET['name'];
-            $biglietto_base = $_POST['biglietto_base'];
-            $biglietto_base_plus = $_POST['biglietto_base_plus'];
-            $biglietto_VIP = $_POST['biglietto_VIP'];
-            $abbonamento_annuale = $_POST['abbonamento_annuale'];
+            @$biglietto_base = $_POST['biglietto_base'];
+            @$biglietto_base_plus = $_POST['biglietto_base_plus'];
+            @$biglietto_VIP = $_POST['biglietto_VIP'];
+            @$abbonamento_annuale = $_POST['abbonamento_annuale'];
             @$data = $_POST['data'];
             @$intestatario = $_POST['NomeIntestatario'];
             @$auguri = $_POST['messaggioAuguri'];
 
             if(!isset($intestatario))
-                $email = $_GET['email'];
+                @$email = $_GET['email'];
             else
-                $email = $_POST['emailIntestatario'];
+                @$email = $_POST['emailIntestatario'];
 
 
             //Create instance of PHPMailer
@@ -150,8 +150,9 @@
             $mail->addAddress("$email");
 
             //Finally send email
-            if ( !($mail->send()) )
-                echo "Message could not be sent. Mailer Error: "($mail->ErrorInfo);
+            // if ( !($mail->send()) )
+            //     echo "Message could not be sent. Mailer Error: "($mail->ErrorInfo);
+            $mail->send();
 
             //Closing smtp connection
             $mail->smtpClose();
