@@ -84,7 +84,7 @@ var contatti = ''+
     '                    </li>'+
     ''+                    
     '                    <li class = "nav-item">'+
-    '                        <a id = "acquista" type = "button" class = "btn btn-primary rounded" href = "../login-register/PHP/bentornato.php"> <b> Acquista </b> </a>'+
+    '                        <a id = "acquista_top" type = "button" class = "btn btn-primary rounded" href = "../login-register/PHP/bentornato.php"> <b> Acquista </b> </a>'+
     '                    </li>'+
     ''+
     '                </ul>'+

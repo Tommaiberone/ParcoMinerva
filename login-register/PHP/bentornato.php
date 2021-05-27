@@ -18,7 +18,7 @@
         
         <?php 
             // verifica che sia stato passato un nome e una mail alla pagina bentornato.php, altrimenti reindirizza a login.html
-            if (!((isset($_GET['name']))&&(isset($_GET['email'])))) //bentornato.php?name=xxx&email=yyy
+            if (!((isset($_GET['name']))&&(isset($_GET['email'])))) //bentornato.php?name=xxx&email=yyy&ricordati=zzz
                 header("Location: ../login.html"); 
         ?>
 
@@ -30,14 +30,14 @@
                 
                 echo "<h2 class='text-center main-title'> Bentornato <i class='text-primary'>$name</i></h2>";
 
-                // inserisco email e nome nel localStorage se la checkbox è segnata
+                // se "ricordati di me" è checkato, email e username vengono salvati nel localStorage, e verranno ricordati anche se il browser sarà chiuso
                 if($ricordati == 'on')
                     echo    "<script language = 'javascript' type = 'text/javascript'>
                                 localStorage.setItem('email', '$email');
                                 localStorage.setItem('name', '$name'); 
                             </script>";
                 
-                // Altrimenti la inserisco nel sessionStorage
+                // se "ricordati di me" NON è checkato, email e username vengono salvati nel sessionStorage, e verranno dimenticati alla chiusura del browser 
                 else
                     echo    "<script language = 'javascript' type = 'text/javascript'>
                                 sessionStorage.setItem('email', '$email');
@@ -181,7 +181,7 @@
                             <div class="form-group">
                                 <!-- Messaggio da passare al grazie.php, da scrivere nella mail da inviare all'amico -->
                                 <textarea id = "auguri" name = "messaggioAuguri" class="form-control rounded rounded-2" form="intestatario"
-                                        placeholder="Inserisci un messaggio d'auguri!" rows="5"></textarea>
+                                        placeholder="Inserisci un messaggio per il tuo amico!" rows="5"></textarea>
                             </div>  
 
                         </div>

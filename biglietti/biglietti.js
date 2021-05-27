@@ -18,7 +18,8 @@ function loadWeather () {
 
 
     // API call
-    const base = `https://api.openweathermap.org/data/2.5/weather?id=${citycode}&appid=${api}&units=metric`
+    const base = `https://api.openweathermap.org/data/2.5/weather?id=${citycode}&appid=${api}&units=metric` 
+    // https://api.openweathermap.org/data/2.5/weather?id=3169071&appid=1e3557c6cfb762e2fd0171356edf710e&units=metric
 
     console.log(base);
 
@@ -28,12 +29,18 @@ function loadWeather () {
             return response.json(); //converts the response to JSON object 
         })
 
-        // destructuring the JSON object 
+        // accessing the JSON object 
         .then((data) => {
-            const { temp } = data.main;
+            console.log(data);
+
+            const { temp } = data.main; // { xxx } = object destructuring 
+            // è uguale a const temp = data.main.temp
             const place = data.name;
-            const { description, icon } = data.weather[0];
-            const { sunrise, sunset } = data.sys;
+            const { description, icon } = data.weather[0]; // { xxx } = object destructuring 
+            // è uguale a const description = data.weather[0].description;
+            //            const icon = data.weather[0].icon;
+
+            const { sunrise, sunset } = data.sys; // { xxx } = object destructuring 
 
             const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`;
             const fahrenheit = (temp * 9) / 5 + 32;
@@ -45,8 +52,8 @@ function loadWeather () {
 
             //interacting with the DOM
             iconImg.src = iconUrl;
-            loc1.textContent = `${place}`;
-            desc.textContent = `${description}`;
+            loc1.textContent = place; // per l'interpolazione di stringhe: `${}`
+            desc.textContent = description;
             tempC.textContent = `${temp.toFixed(2)} °C`;
             tempF.textContent = `${fahrenheit.toFixed(2)} °F`;
             sunriseDOM.textContent = `${sunriseGMT.toLocaleDateString()}, ${sunriseGMT.toLocaleTimeString()}`;

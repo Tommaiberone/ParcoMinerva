@@ -9,8 +9,6 @@ function validateForm(event) {
     if (! validateEmail(email)) return false;
 
     if (! validatePassword(pass)) return false; 
-
-    //rememberMeCheck(checkbox, email);
 }
 
 //validazione dell'email
@@ -46,15 +44,6 @@ function validatePassword(pass) {
     return true;
 }
 
-// validazione del remember me
-//N.B: se "ricordati di me" è checkato, lo username viene salvato nel localStorage, e verrà ricordato anche se il browser sarà chiuso
-//     se "ricordati di me" NON è checkato, lo username viene salvato nel sessionStorage, e verrà dimenticato alla chiusura del browser 
-function rememberMeCheck(checkbox, email){
-    if (checkbox) localStorage.setItem("email", email);
-    else sessionStorage.setItem("email", email);
-}
-
-
 // verifica che l'utente sia già loggato: se loggato reindirizza alla schermata di acquisto dei biglietti
 function checkStorage() {
     if (localStorage.getItem("email") && localStorage.getItem("name")) 
@@ -63,6 +52,80 @@ function checkStorage() {
         window.location.href = './PHP/bentornato.php?name=' + sessionStorage.getItem("name") + '&email=' + sessionStorage.getItem("email");
 }
 
+// Aggiorna il costo totale dei biglietti scelti
+function update(val, num) {
+        
+    // Disattiva i pulsanti se la data inserita è precedente a quella odierna
+    if (num==5 && !CheckDate()) {
+        $('#acquista').removeAttr("enabled");
+        $('#amico').removeAttr("enabled");
+        $('#acquista').attr("disabled","disabled");
+        $('#amico').attr("disabled","disabled");
+    }
+    
+    // Riattiva i pulsanti se la data è stata inserita correttamente
+    if (num==5 && CheckDate()) {
+        $('#acquista').removeAttr("disabled");
+        $('#amico').removeAttr("disabled");
+        $('#acquista').attr("enabled","enabled");
+        $('#amico').attr("enabled","enabled");
+    }
+    
+    // Fa comparire la data per i biglietti base
+    else if(num==1 && val!=0) {
+        $('#data-biglietto').css("display", "inline");
+
+        // Disattiva i pulsanti se la data non è inserita
+        if (!CheckDate()) {
+            $('#acquista').removeAttr("enabled");
+            $('#amico').removeAttr("enabled");
+            $('#acquista').attr("disabled","disabled");
+            $('#amico').attr("disabled","disabled");
+        }
+    }
+        
+    else if(num==1 && val==0) {
+        $('#data-biglietto').css("display", "none");
+        $('#acquista').removeAttr("disabled");
+        $('#amico').removeAttr("disabled");
+        $('#acquista').attr("enabled","enabled");
+        $('#amico').attr("enabled","enabled");
+    }
+
+    $('#range-value' + num).text(val);
+
+    var total = parseInt($('#range-value1').text())*10;
+    total += parseInt($('#range-value2').text())*12;
+    total += parseInt($('#range-value3').text())*16;
+    total += parseInt($('#range-value4').text())*100;
+
+    $('#importo-totale').text(total);
+}
+
+// Verifica che la data sia maggiore di quella odierna
+function CheckDate() {
+
+    var CurrentDate = new Date();
+    console.log("CurrentDate = " + CurrentDate);
+
+    var UserDate = new Date($('#data').val());
+    UserDate.setHours(UserDate.getHours() + 15);
+    console.log("UserDate = " + UserDate);
+
+    if(UserDate >= CurrentDate ){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+// Verifica che si sia comprato almeno un biglietto e rimanda alla schermata di ringraziamento
+function verify() {
+    if($('#importo-totale').text()==0){
+        alert("Scegli almeno un biglietto da acquistare");
+        return false;
+    } return true;
+}
 
 
 
