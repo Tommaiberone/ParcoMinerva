@@ -206,7 +206,7 @@
         <script src = "../login.js"></script>
         <script src = "../register.js"></script>
 
-        <!-- Bootstrap JS bundle (Popper included) [Chiedere a Rosati se va bene importare il bundle invece dei due separati] -->
+        <!-- Bootstrap JS bundle (Popper included)-->
         <script src = "../../js/bootstrap.bundle.js"></script>
     </body>
 </html>
