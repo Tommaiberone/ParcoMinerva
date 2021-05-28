@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Recensioni</title>
+
+		<!-- CSS stylesheets imports (always Bootstrap FIRST) -->
+        <link rel = "stylesheet" type = "text/css" href = "../css/bootstrap.css">
+        <link rel = "stylesheet" type = "text/css" href = "../css/global.css">
+		<link rel="stylesheet" type="text/css" href="reviews.css">
+        
+	</head>
+	<body onload="login_signup_hide ();">
+	    
+        <!-- ##### -->
+        <!-- Navigation bar -->
+        <script src="../js/Top_bar.js"></script>
+
+		<div class="content home">
+			<h1> Cosa pensano i nostri clienti?</h1>
+            <div class="reviews container border border-primary border-2 rounded-3"></div>
+            <script>
+                fetch("reviews.php")
+                    .then(response => response.text())
+                    .then(data => {
+                        document.querySelector(".reviews").innerHTML = data;
+                        
+                        // Aggiunge un listener al bottone Write review
+                        document.querySelector(".reviews .write_review_btn").onclick = event => {
+                            event.preventDefault();
+
+                            // Fa comparire la form per scrivere la recensione
+                            document.querySelector(".reviews .write_review").style.display = 'block';
+
+                            // Fa il focus sulla prima casella di testo della form
+                            document.querySelector(".reviews .write_review input[name='name']").focus();
+                        };
+
+                        // Aggiunge un listener al bottone Submit della form
+                        document.querySelector(".reviews .write_review form").onsubmit = event => {
+                            event.preventDefault();
+                            
+                            // Impacchetta il contenuto della form e lo manda tramite $_POST a reviews.php
+                            if(sessionStorage.getItem("name"))
+                                nome = sessionStorage.getItem("name");
+                            if(localStorage.getItem("name"))
+                                nome = localStorage.getItem("name");
+                            
+                            valori = new FormData(document.querySelector(".reviews .write_review form"));
+                            valori.append("name", nome);
+
+                            fetch("reviews.php", {
+                                method: 'POST',
+                                body: valori
+                            })
+
+                                // Mette il risultato di quest'ultima fetch dentro il file html
+                                .then(response => response.text()).then(data => {
+                                     document.querySelector(".reviews .write_review").innerHTML = data;
+                                });
+                        };
+                    });
+            </script>
+		</div>
+
+        <!-- Bottom Bar -->
+        <script src="../js/Bottom.js"></script>
+
+        <!-- Optional JS scripts-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src = "../js/global.js" async></script>
+        <script src = "reviews.js" async></script>
+
+        <!-- Bootstrap JS bundle (Popper included)-->
+        <script src = "../js/bootstrap.bundle.js"></script>
+    
+	</body>
+</html>

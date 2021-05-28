@@ -1,0 +1,125 @@
+.stelline {
+    text-align: right !important;
+}
+
+h1 {
+    font-size: 3vw !important;
+    text-align:center;
+    margin-top: 4vh !important;
+    margin-bottom: 5vh !important;
+}
+
+
+
+.container {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.616);
+    border-radius: 2vw !important;
+    /* margin-left: 15%;
+    margin-right: 15%; */
+}
+
+.overall_rating .num {
+    font-size: 30px;
+    font-weight: bold;
+    color: #F5A624;
+}
+.stars {
+    letter-spacing: 3px;
+    font-size: 32px;
+    color: #F5A624;
+    padding: 0 5px 0 10px;
+}
+.overall_rating .total {
+    color: #777777;
+    font-size: 14px;
+}
+.write_review_btn, .write_review button {
+    display: inline-block;
+    background-color: #0275d8;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0 0 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+}
+
+.write_review {
+    display: none;
+    padding: 20px 0 10px 0;
+}
+.write_review textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 150px;
+    margin-top: 10px;
+}
+.write_review input {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.write_review button {
+    cursor: pointer;
+}
+.review {
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+}
+.review .rating {
+    letter-spacing: 2px;
+    font-size: 22px;
+    color: #F5A624;
+}
+.review .date {
+    color: #777777;
+    font-size: 14px;
+}
+.review:last-child {
+    border-bottom: 0;
+}
+
+
+#stelline {
+    display: inline;
+    position: absolute;
+    right: 17%;
+}
+
+#recensore {
+    display: inline;
+    position: absolute;
+    left: 17%;
+    margin-top: .8vh;
+    font-size: 1.4vw;
+    color: #555555;
+    text-align: left;
+    width: 10%;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+.review .content {
+    width: 60%;
+    overflow:auto;
+    font-size: 1.4vw;
+    display: inline-block;
+}
+
+textarea {
+    width: 60%;
+}
+
+.range-container {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* text-align: center; */
+}

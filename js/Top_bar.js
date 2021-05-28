@@ -28,6 +28,13 @@ if (dir == "/biglietti") {
     BigliettiActive= 'active';
     preBiglietti = '';
 }
+var RecensioniActive = '';
+var preRecensioni = '../reviews/';
+if (dir == "/reviews") {
+    RecensioniActive= 'active';
+    preRecensioni = '';
+}
+
 
 
 var contatti = ''+
@@ -58,6 +65,10 @@ var contatti = ''+
     ''+
     '                    <li class = "nav-item">'+
     '                        <a class = "nav-link ' + AttrazioniActive + ' " href = "' + preAttrazioni + 'attractions.html"> <b> Attrazioni </b> </a>'+
+    '                    </li>'+
+    ''+
+    '                    <li class = "nav-item">'+
+    '                        <a class = "nav-link ' + RecensioniActive + ' " href = "' + preRecensioni + 'reviews.html"> <b> Recensioni </b> </a>'+
     '                    </li>'+
     ''+
     '                    <li class = "nav-item">'+
