@@ -104,7 +104,7 @@
             if ($biglietto_base == 0)
                 $data="Nessuna";
 
-
+            // invio del biglietto regalato all'amico
             if(isset($intestatario))
                 $mail->Body = "<h1>Ciao, " . $intestatario . " </h1></br><p>" . $name . " ti ha regalato dei biglietti! </p> <p>" . $auguri . "</p>" 
                                 
@@ -123,7 +123,8 @@
                                 . "</p><p> Ecco a te un codice per riscattare alle casse eventuali promozioni: " .  substr(md5 (rand ()), 0, 10)
 
                                 . "</p><p> Vi aspettiamo e vi auguriamo un buon divertimento nel parco della Minerva!";
-
+            
+            // invio del biglietto all'utente registrato 
             else
                 $mail->Body = "<h1>Ciao, " . $name . " </h1></br><p>Ecco a te i tuoi biglietti: </p>" 
 
