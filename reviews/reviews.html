@@ -10,7 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="reviews.css">
         
 	</head>
-	<body onload="login_signup_hide ();">
+	<body onload="login_signup_hide (); accedi_o_recensisci();">
 	    
         <!-- ##### -->
         <!-- Navigation bar -->
@@ -18,7 +18,7 @@
 
 		<div class="content home">
 			<h1> Cosa pensano i nostri clienti?</h1>
-            <div class="reviews container border border-primary border-2 rounded-3"></div>
+            <div id="rotondo" class="reviews container border border-primary border-2 rounded-3"></div>
             <script>
                 fetch("reviews.php")
                     .then(response => response.text())
@@ -26,18 +26,18 @@
                         document.querySelector(".reviews").innerHTML = data;
                         
                         // Aggiunge un listener al bottone Write review
-                        document.querySelector(".reviews .write_review_btn").onclick = event => {
+                        document.querySelector(".write_review_btn").onclick = event => {
                             event.preventDefault();
 
                             // Fa comparire la form per scrivere la recensione
-                            document.querySelector(".reviews .write_review").style.display = 'block';
+                            document.querySelector(".write_review").style.display = 'block';
 
                             // Fa il focus sulla prima casella di testo della form
-                            document.querySelector(".reviews .write_review input[name='name']").focus();
+                            document.querySelector(".write_review input[name='name']").focus();
                         };
 
                         // Aggiunge un listener al bottone Submit della form
-                        document.querySelector(".reviews .write_review form").onsubmit = event => {
+                        document.querySelector(".write_review form").onsubmit = event => {
                             event.preventDefault();
                             
                             // Impacchetta il contenuto della form e lo manda tramite $_POST a reviews.php
