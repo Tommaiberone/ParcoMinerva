@@ -1,6 +1,4 @@
-
 function update(val) {
-
     stringa=repeat(val);
     $('#range-stelline').html(stringa);
 }
@@ -13,7 +11,6 @@ function repeat(val) {
     }
 
     return stringa;
-
 }
 
 function accedi_o_recensisci() {

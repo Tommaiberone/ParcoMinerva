@@ -20,8 +20,7 @@
                 $now = new DateTime();
                 $ago = new DateTime($datetime);
                 $diff = $now->diff($ago);
-                $diff->h -=10;
-                $diff->i -=32;
+                $diff->h -=19;
                 $diff->w = floor($diff->d / 7);
                 $diff->d -= $diff->w * 7;
                 $string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
@@ -76,13 +75,12 @@
 
         ?>
 
+        <!-- Stampa la media delle recensioni -->
         <div class="overall_rating">
             <span class="num"><?=number_format($reviews_info['overall_rating'], 1)?></span>
             <span class="stars"><?=str_repeat('&#9733;', round($reviews_info['overall_rating']))?></span>
             <span class="total"><?=$reviews_info['total_reviews']?> reviews</span>
         </div>
-        <!-- <a href="#" class="write_review_btn">Lasciaci una recensione!</a> -->
-
         
         <a id = "accedi_per" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html"> <b> Accedi per lasciare una recensione!</b> </a>
         <a id = "recensisci" disabled href="#" class = "btn btn-primary rounded write_review_btn"> <b> Lasciaci una recensione! </b> </a>
@@ -93,7 +91,7 @@
                     <input name="rating" id="slider" type="range" class="form-range" value="3" min="1" max="5" onchange="update(this.value)" required> 
                     <span id="range-stelline" class="stars"></span>
                 </div>
-                <div style="align-content:center;" class="testo"> Inserisci il codice per le recensioni che ti abbiamo inviato per email
+                <div style="align-content:center;" class="testo"> Inserisci il codice per le recensioni che ti abbiamo inviato per email al momento dell'acquisto dei biglietti
                     <input name = "codice" id="codice_recensioni" type="text" placeholder="Codice" class="container" required></input>
                 </div>
                 <textarea style= "width: 60%; text-align:center" name="content" placeholder="Scrivi qui la tua recensione..." required></textarea>
@@ -101,6 +99,7 @@
             </form>
         </div>
 
+        <!-- Stampa a schermo le recensioni -->
         <?php foreach ($reviews as $review): ?>
             <div class="review">
                 <h2 class="name">
