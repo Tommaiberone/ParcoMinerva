@@ -16,4 +16,20 @@ function repeat(val) {
 
 }
 
+function accedi_o_recensisci() {
+    setTimeout(accedi_o_recensisci2, 300);
+    
+}
+
+function accedi_o_recensisci2() {
+    if(sessionStorage.getItem('email') || localStorage.getItem('email')) {
+        $('#accedi_per').css('display','none');
+        $('#recensisci').css('display','inline-block');
+    }
+    else {
+        $('#accedi_per').css('display','inline-block');
+        $('#recensisci').css('display','none');
+    }
+}
+
 

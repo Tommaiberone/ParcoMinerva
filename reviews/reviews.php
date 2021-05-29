@@ -11,15 +11,17 @@
 
     </head>
 
-    <body>
+    <body onload="accedi_o_recensisci()">
 
         <?php
 
             // Converte una data in tempo trascorso
             function time_elapsed_string($datetime, $full = false) {
-                $now = new DateTime;
+                $now = new DateTime();
                 $ago = new DateTime($datetime);
                 $diff = $now->diff($ago);
+                $diff->h -=10;
+                $diff->i -=32;
                 $diff->w = floor($diff->d / 7);
                 $diff->d -= $diff->w * 7;
                 $string = array('y' => 'year', 'm' => 'month', 'w' => 'week', 'd' => 'day', 'h' => 'hour', 'i' => 'minute', 's' => 'second');
@@ -43,8 +45,14 @@
                                     or die ("Impossibile connettersi: " . pg_last_error());
 
             @$name = $_POST['name'];
+            @$codice = $_POST['codice'];
             @$rating = $_POST['rating'];
             @$content = $_POST['content'];
+                
+            if(isset($codice) && $codice != 1234) {
+                exit("Il codice inserito è errato! Per favore ricarica la pagina");
+            }
+                
 
             if (isset($name, $rating, $content)) {
                 
@@ -73,17 +81,22 @@
             <span class="stars"><?=str_repeat('&#9733;', round($reviews_info['overall_rating']))?></span>
             <span class="total"><?=$reviews_info['total_reviews']?> reviews</span>
         </div>
-        <a href="#" class="write_review_btn">Lasciaci una recensione!</a>
-        <div class="write_review">
+        <!-- <a href="#" class="write_review_btn">Lasciaci una recensione!</a> -->
+
+        
+        <a id = "accedi_per" type = "button" class = "btn btn-primary rounded" href = "../login-register/login.html"> <b> Accedi per lasciare una recensione!</b> </a>
+        <a id = "recensisci" disabled href="#" class = "btn btn-primary rounded write_review_btn"> <b> Lasciaci una recensione! </b> </a>
+        <div id="form-container" class="write_review container">
             <form>
                 <div class="range-container">
-                    <!-- <input type="text" name="name" placeholder="Inserisci il tuo nome" required> -->
-                    <span >Inserisci qua un voto da 1 a 5 stelle</span>
-                    <input name="rating" style="margin-left:27vw" type="range" class="form-range" value="3" min="1" max="5" onchange="update(this.value)" required> 
-                    <!-- <input name="rating" type="number" min="1" max="5" placeholder="Rating (1-5)" required> -->
+                    <span class="testo">Che voto dai al nostro parco da 1 a 5 stelle?</span>
+                    <input name="rating" id="slider" type="range" class="form-range" value="3" min="1" max="5" onchange="update(this.value)" required> 
                     <span id="range-stelline" class="stars"></span>
                 </div>
-                <textarea style= "width: 60%;" name="content" placeholder="Scrivi qui la tua recensione..." required></textarea>
+                <div style="align-content:center;" class="testo"> Inserisci il codice per le recensioni che ti abbiamo inviato per email
+                    <input name = "codice" id="codice_recensioni" type="text" placeholder="Codice" class="container" required></input>
+                </div>
+                <textarea style= "width: 60%; text-align:center" name="content" placeholder="Scrivi qui la tua recensione..." required></textarea>
                 <div><button type="submit">Invia la tua recensione</button></div>
             </form>
         </div>

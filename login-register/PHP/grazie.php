@@ -122,6 +122,8 @@
                                 
                                 . "</p><p> Ecco a te un codice per riscattare alle casse eventuali promozioni: " .  substr(md5 (rand ()), 0, 10)
 
+                                . "</p><p> Ed uno per lasciare una recensione sul nostro sito, se vuoi: 1234" 
+
                                 . "</p><p> Vi aspettiamo e vi auguriamo un buon divertimento nel parco della Minerva!";
 
             else
@@ -141,6 +143,8 @@
                 
                 . "</p><p> Ecco a te un codice per riscattare alle casse eventuali promozioni: " . substr(md5 (rand ()), 0, 10)
                 
+                . "</p><p> Ed uno per lasciare una recensione sul nostro sito, se vuoi: 1234" 
+
                 . "</p><p> Vi aspettiamo e vi auguriamo un buon divertimento nel parco della Minerva!";
 
             //Add gif in email 

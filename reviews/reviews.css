@@ -1,3 +1,7 @@
+#slider {
+    margin-left:13vw
+}
+
 .stelline {
     text-align: right !important;
 }
@@ -8,8 +12,6 @@ h1 {
     margin-top: 4vh !important;
     margin-bottom: 5vh !important;
 }
-
-
 
 .container {
     text-align: center;
@@ -74,6 +76,7 @@ h1 {
     padding: 20px 0;
     border-bottom: 1px solid #eee;
 }
+
 .review .rating {
     letter-spacing: 2px;
     font-size: 22px;
@@ -113,13 +116,69 @@ h1 {
     display: inline-block;
 }
 
-textarea {
-    width: 60%;
+#rotondo {
+    border-radius: 20px !important;
 }
 
-.range-container {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    /* text-align: center; */
+#codice_recensioni {
+    background: white !important;
+    font-size: 16px;
+    border-radius: 10px !important;
+}
+
+.testo {
+    font-size: 22px !important;
+}
+
+#form-container {
+    width: 60%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+textarea {
+    width: 60%;
+    border-radius: 10px !important;
+}
+
+#recensisci {
+    display: none;
+}
+
+#accedi_per {
+    display: none;
+}
+
+#backToTopButton {
+    background: rgba(255, 255, 255, 0.466);
+}
+
+/* Smartphone view */
+@media only screen and (max-width: 1023px) {
+
+    h1 {
+        font-size: 30px !important;
+    }
+
+    #stelline {
+        right: 5vw;
+    }
+
+    .date{
+        display: none;
+    }
+
+    #recensore {
+        font-size: 20px;
+        left: 5vw;
+        width: 20%;
+    }
+
+    .review .content {
+        font-size: 20px;
+    }
+
+    #slider {
+        margin-left:5vw
+    }
 }
