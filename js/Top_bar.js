@@ -43,7 +43,7 @@ var contatti = ''+
                                 //page content does not cover the entire screen)
     '        <div id = "HoverSpace" class = "container-fluid sticky-top">'+
     '            <br>'+
-    '            <nav id = "navibar" class = "navbar navbar-expand-md navbar-light  border border-primary border-2 shadow ms-0 me-0 " style = "border-radius: 25px; background-color: #e3f2fd;">'+
+    '            <nav id = "navibar" class = "navbar navbar-expand-lg navbar-light  border border-primary border-2 shadow ms-0 me-0 " style = "border-radius: 25px; background-color: #e3f2fd;">'+
     ''+             
     '                <!-- Logo -->'+
     '                <a class = "navbar-brand ms-3" href = "../index/index.html">'+
