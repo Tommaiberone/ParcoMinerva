@@ -143,6 +143,7 @@ function checkStorage() {
 }
 
 
+// codice del form della funzionalità di "regala i biglietti ad un amico"
 $("#regalaBTN").click(function(event) {
 
     if (!validateFormIntestatario()) return false;

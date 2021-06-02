@@ -72,6 +72,7 @@ function reset_bump () {
 }
 
 //stessa funzione del global.js ma cambia anche la scritta "Devi effettuare l'accesso per poter comprare un biglietto!" e il bottone accedi in fondo al div biglietti
+// (nasconde i bottoni accedi e registrati e li rimpiazza con logout e acquista)
 function login_signup_hide1 () {
     if (localStorage.getItem("email") || sessionStorage.getItem("email")) {
         $("#login").css("display","none");

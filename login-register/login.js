@@ -52,7 +52,8 @@ function checkStorage() {
         window.location.href = './PHP/bentornato.php?name=' + sessionStorage.getItem("name") + '&email=' + sessionStorage.getItem("email");
 }
 
-// Aggiorna il costo totale dei biglietti scelti
+
+// Aggiorna il costo totale dei biglietti scelti nella pagina bentornato.php
 function update(val, num) {
         
     // Disattiva i pulsanti se la data inserita è precedente a quella odierna
@@ -102,7 +103,8 @@ function update(val, num) {
     $('#importo-totale').text(total);
 }
 
-// Verifica che la data sia maggiore di quella odierna
+
+// Verifica che la data sia maggiore di quella odierna nel campo data del form di acquisto dei biglietti
 function CheckDate() {
 
     var CurrentDate = new Date();
